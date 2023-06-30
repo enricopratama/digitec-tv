@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  panel:
+    build: "./"
+    image: "${IMAGE_NAME}:${IMAGE_VERSION}"
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "3"
+        max-size: "100m"
+    env_file:
+      - .env
+    #network_mode: bridge
+    ports:
+      - "1300:3000"
+    volumes:
+      - /Users/enricoprayogo/Desktop/public/upload:/usr/src/app/logs
+    restart: on-failure
+    environment:
+      TZ: "Asia/Jakarta"
+      #appconfig (APP_PORT Tidak Perlu Diganti)
+      APP_PORT: 3000
+      APP_URL: "[APP_URL]"
+
+      #database config
+      DB_HOST: ""
+      DB_PORT: ""
+      DB_USER: ""
+      DB_PASS: ""
+      DATABASE: ""
+
+      #redis config
+      REDIS_HOST: ""
+      REDIS_PORT: ""
+      REDIS_PASS: ""

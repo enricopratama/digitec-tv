@@ -16,11 +16,9 @@ app.all('*', (req, res) => {
     res.status(404).send('<h1>404! Page not found</h1>');
   });
 
-app.listen(config.PORT, function(err) {
+app.listen(process.env.APP_PORT, function(err) {
     if (err) {
         return console.log("An error occured.");
     }
-    console.log("This server is running on port " + config.PORT);
+    console.log("This server is running on port " + process.env.APP_PORT);
 });
-
-
