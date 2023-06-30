@@ -1,0 +1,11 @@
+deploy-docker:
+  only:
+    - main
+  tags:
+    - onigiri
+  script:
+    - cd /var/www/digitec.onigiri.fira.id
+    - git stash
+    - git pull origin main
+    - git stash pop
+    - docker-compose -f docker.stag.yaml up --force-recreate -d --build
