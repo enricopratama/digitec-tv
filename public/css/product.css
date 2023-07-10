@@ -120,6 +120,7 @@ ul {
     letter-spacing: 0px;
     color: #707070;
     opacity: 1;
+    padding-top: 10px;
 }
 
 .descTitle-products{
@@ -171,7 +172,7 @@ ul {
     position: absolute !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    padding-left: 50px;
+    padding-left: 70px;
 }
 
 @media (min-width: 991.99px) and (max-width: 2199.98px) {
@@ -283,6 +284,7 @@ ul {
       top: 0% !important;
       right: 0 !important;
       transform: translateY(0%) !important;
+      padding-right: 2vb;
     }
 }
 
@@ -342,6 +344,7 @@ ul {
       right: 0 !important;
       transform: translateY(0%) !important;
       padding-left: 1vb;
+      padding-right: 2vb;
     }
 
     .positionDesc-smartTV {
@@ -406,6 +409,7 @@ ul {
     right: 0 !important;
     transform: translateY(0%) !important;
     padding-left: 2vb;
+    padding-right: 2vb;
     }
 }
 
@@ -462,6 +466,7 @@ ul {
     right: 0 !important;
     transform: translateY(0%) !important;
     padding-left: 2vb;
+    padding-right: 2vb;
     }
 
     .descTitle-products {
