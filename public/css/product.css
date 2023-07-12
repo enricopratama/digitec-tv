@@ -172,7 +172,7 @@ ul {
     position: absolute !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    padding-left: 70px;
+    padding-left: 36px;
 }
 
 @media (min-width: 991.99px) and (max-width: 2199.98px) {
