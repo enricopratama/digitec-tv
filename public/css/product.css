@@ -18,21 +18,6 @@ body {
   flex: 1;
 }
 
-.navbar-black {
-    background-color: #1d1819;
-}
-
-.navbar-nav-custom .nav-link {
-    margin-right: 40px; /* Adjust the right margin to increase or decrease the spacing */
-}
-
-.navbar-nav-custom .nav-link,
-.navbar-brand {
-    padding-top: 12px; /* Increase the top padding to make the navbar taller */
-    padding-bottom: 11px; /* Increase the bottom padding to make the navbar taller */
-    font-size: 14px; /* Adjust the font size to your preference */
-}
-
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -65,17 +50,8 @@ body {
     margin: 0;
 }
 
-.footer {
-    background-color: #1D1819;
-    font-size: 10px;
-    width: 100%;
-    padding: 10px;
-    color: #fff;
-    margin: 0;
-}
-
 h1, p{
-    color: white;
+    color: black;
 }
 
 h1 {

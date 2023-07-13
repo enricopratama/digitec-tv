@@ -1,58 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!--Home.css CSS-->
+    <%- include('header') %>
     <link rel="stylesheet" href="css/home.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZSP0RGVYCY"></script>
-    <%- include('gtag') %>
-
-    <!--FavIcon (website icon)-->
-    <link rel="icon" type="image/png" href="image/digitecIcon.jpg" />
-    <link rel="icon" href="image/digitecIcon.jpg">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon_2.png">
-    <link rel="mask-icon" href="{{ base_path }}/images/safari-pinned-tab.svg?v=M44lzPylqQ" 
-    color="#000000">
-    
-
-    <!--Animations js-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <title>Digitec-tv Homepage</title>
   </head>
-  <style>
-  .carousel-extend {
-    margin-top: 1rem;
-    padding-top: 1rem;
-  }
-  @media (max-width: 290px) { /* For Galaxy Fold */
-    .carousel-extend {
-      margin-top: 3rem;
-      padding-top: 3rem;
-    }
-  }
-  @media (min-width: 300px) and (max-width: 450.98px) {
-    .carousel-extend {
-      margin-top: 2rem;
-      padding-top: 2rem;
-    }
-  }
-
-  .text {
-    flex: 1;
-    text-align: center;
-  }
-
-  </style>
   <body>
-      <!--Start of navbar-->
       <%- include('navbarNew') %>
-      <!--End of navbar-->
-
       <!--Start of Carousel-->
       <div>
         <div class="carousel-extend">
@@ -83,32 +36,28 @@
       <!--End of Carousel-->
 
       <!-- Description Text Start-->
+      <div class="desc-container">
         <div class="text">
           <div class="descTitle">
-            <h1>SMART TV</h1>
+            <h1>A Harmony of Japanese Art & Technology</h1>
           </div>
           <div class="descDesc">
-            <p> Digitec didesain khusus untuk mempermudah penggunaan
-              dengan tampilan yang sederhana, kompak dan mudah dimengerti,
-              memberikan pengalaman smart TV yang ringan, nyaman dan
-              menyenangkan.
+            <p> 
+              Jepang dikenal sebagai pusat seni yang kaya dan teknologi yang canggih. Terinspirasi dari negara sakura yang selalu mengedepankan kualitas produk yang unggul tanpa mengesampingkan keindahan estetika traditional yang menjadi ciri khasnya. 
               <br><br>
-              Dengan fitur Screen Casting Digitec dapat Tampilkan foto, video
-              dan konten lainnya dari perangkat selular ke layar TV dengan
-              aplikasi CAST yang tersedia di halaman muka.</p>
-            </div>
+              DIGITEC hadir memberikan solusi produk elektronik yang terinspirasi dari harmoni seni yang indah dan teknologi yang canggih. Produk - produk yang dihadirkan menjawab kebutuhan hidup modern saat ini dengan desain yang minimalis dan elegan serta disematkan teknologi dengan fitur - fitur yang cangih dan fungsional 
+              <br><br>
+              Smart TV DIGITEC didesain khusus untuk mempermudah pengguna dengan tampilan yang menarik dan mudah dimengerti, memberikan pegalaman menonton yang menyenangkan. Menikmati hiburan seperti mengakses youtube, prime vidio sampai menampilkan foto ke layar televisi melalui aplikasi casting dapat dilakukan dengan mudah dengan mengakses tampilan muka Smart TV Digitec. 
+            </p>
           </div>
         </div>
-        <!--Description Text End-->
+        <div class="mask"></div>
+      </div>
+      
+      <!--Description Text End-->
 
-        <!--Start of footer-->
-        <%- include('footer') %>
-        <!--End of footer-->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+      <%- include('footer') %>
+      <%- include('scriptFooter') %>
+      <script src="/javascript/cursor.js"></script>
   </body>
 </html>

@@ -31,9 +31,13 @@ app.get('/support', (req, res) => {
     res.render('support', { currentPage: 'support' });
 });
 
-// Handling non matching request from the client
+app.get('/login', (req, res) => {
+    res.render('login', { currentPage: 'login' });
+});
+
+// Handling non matching request from the client (404 not found)
 app.all('*', (req, res) => {
-    res.status(404).send('<h1>404! Page not found</h1>');
+    res.render('page_404', { currentPage: 'page_404' });
   });
 
 

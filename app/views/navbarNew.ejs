@@ -1,4 +1,27 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-black navbar-nav-custom py-lg-2 px-lg-4 py-2">
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  
+  * {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .navbar-black {
+      background-color: #1d1819;
+  }
+
+  .navbar-nav-custom .nav-link {
+      margin-right: 40px; 
+  }
+
+  .navbar-nav-custom .nav-link,
+  .navbar-brand {
+      padding-top: 12px; 
+      padding-bottom: 11px; 
+      font-size: 14px;
+  }
+</style>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-black navbar-nav-custom py-lg-2 px-lg-4 py-2" style="z-index: 20;">
   <div class="container-fluid">
     <a href="/" style="width: 100%; max-width: 78%; top: 42px;">
       <img class="d-inline-block align-top ml-0 ms-0 img-fluid logo-digitec pl-lg-8" 
@@ -16,6 +39,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link <% if (currentPage === 'products') { %>active<% } %>" href="products">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <% if (currentPage === 'support') { %>active<% } %>" href="#">Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <% if (currentPage === 'login') { %>active<% } %>" href="login">Login</a>
         </li>
       </ul>
     </div>

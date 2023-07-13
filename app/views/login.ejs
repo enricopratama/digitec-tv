@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('header') %>
+</head>
+<body>
+    <%- include('navbarNew') %>
+    <div class="col2-set row row-divided row-large" id="cutomer_login">
+        <div class="col-1 large-6 col pb-0">
+            <div class="account-login-inner">
+
+            </div>
+        
+        </div>
+        <div class="col-2 large-6 col pb-0">
+            <div class="account-register-inner">
+                <h3 class="uppercase">Register</h3>
+                <form method="post" class="woocommerce-form woocomerce-form-register register">
+                    <p class="woocomerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_email">
+                            "Email address&nbsp"
+                            <span class="required">*</span>
+                        </label>
+                        <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value>
+                    </p>
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_password">
+                            "Password&nbsp"
+                            <span class="required">*</span>
+                        </label>
+                        <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password">
+                    </p>
+                    <p id="woo_reg_captcha" class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_captcha">
+                            "Captcha&nbsp"
+                            <span class="required">*</span>
+                        </label>
+                        <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password">
+                    </p>
+                    <div name="g-recaptcha" class="g-recaptcha" data-callback="verifyCallback_woo_signup" data-sitekey="6Lf9USIcAAAAAODcU0JZA9fTOaQ9OlH14RDBkXYx" data-theme="light" data-size="normal">
+                        <div style="width: 304px; height: 78px;">
+                            <div>
+                                <iframe src="" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
