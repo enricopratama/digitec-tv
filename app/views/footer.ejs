@@ -1,26 +1,29 @@
 <style>
-    * {
+  * {
     font-family: "Montserrat", sans-serif;
-    }
+  }
 
-    .footer {
-        background-color: #1D1819;
-        font-size: 10px;
-        width: 100%;
-        padding: 10px;
-        color: #fff;
-        margin: 0;
-    }
+  .footer {
+    background-color: #1d1819;
+    font-size: 10px;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    margin: 0;
+  }
 </style>
 
-<footer class="footer" style="z-index: 5;">
-    <div class="container text-center p-3">
-        <p class="mb-0" style="font-size: 10px; font-weight: 300; line-height: 15px; color: white;">
-            <% const currentYear = new Date().getFullYear() %>
-            Hak Cipta &copy <%- currentYear %> DIGITEC | v1.0.0
-            <!--•<a href="#" style="margin-right: 10px;">Privacy Policy</a> -->
-            <!--<span class="separator"></span> -->
-            <!-- <a href="#" style="margin-left: 10px;">User Agreement</a> -->
-        </p>
-    </div>
+<footer class="footer" style="z-index: 5">
+  <div class="container text-center p-3">
+    <p
+      class="mb-0"
+      style="font-size: 10px; font-weight: 300; line-height: 15px; color: white"
+    >
+      <% const currentYear = new Date().getFullYear() %> Hak Cipta &copy <%-
+      currentYear %> DIGITEC | v1.0.0
+      <!--•<a href="#" style="margin-right: 10px;">Privacy Policy</a> -->
+      <!--<span class="separator"></span> -->
+      <!-- <a href="#" style="margin-left: 10px;">User Agreement</a> -->
+    </p>
+  </div>
 </footer>

@@ -1,140 +1,138 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,100&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #404040;
-    min-width: fit-content;
-}
-
-.content {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #404040;
+  min-width: fit-content;
+  font-family: "Poppins", sans-serif;
 }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    color: #fff;
-    text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
 }
 
 .carousel-caption h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .carousel-caption p {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .carousel-inner {
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .grey-background {
-    background-color: #404040;
-    padding: 10px;
-    color: #fff;
-    width: 100%;
-    margin: 0;
+  background-color: #404040;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+  margin: 0;
 }
 
-h1, p{
-    color: black;
+h1,
+p {
+  color: black;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: 30px;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
-.descTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding-top: 20px;
-}    
+.descTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+}
 
-.descDesc{
-    height: 50%;
-    width: 70%;
-    padding-top: 20px;
-    padding-bottom: 100px;
-    text-align: center;
-    margin: auto;
+.descDesc {
+  height: 50%;
+  width: 70%;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  text-align: center;
+  margin: auto;
 }
 
 ul {
-    list-style-type: disc; 
-    color: white; 
-    text-align: left; 
-    font-family: "Montserrat", sans-serif;
-    font-weight: light;   
+  list-style-type: disc;
+  color: white;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: light;
 }
 
 .descDesc-product {
-    width: 358px;
-    height: 128px;
-    text-align: left;
-    font-size: 15px;
-    letter-spacing: 0px;
-    color: #707070;
-    opacity: 1;
-    padding-top: 10px;
+  width: 358px;
+  height: 128px;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+  padding-top: 10px;
 }
 
-.descTitle-products{
-    display: flex; 
-    justify-content: left;
-    align-items: left;
-    margin-top: 20px;
-    padding-top: 20px;
-    margin: auto;
-    font-weight: bold;
-    text-align: left;
-}  
+.descTitle-products {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin: auto;
+  font-weight: bold;
+  text-align: left;
+}
 
 .spesifikasiDisplay {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 66px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 66px;
 }
 
 .spesifikasiPoints {
-    font-weight: 200;
-    font-size: 18px;
-    line-height: 3vh;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 3vh;
 }
 
 .descBox {
-    width: 36.3% !important;
+  width: 36.3% !important;
 }
 
 .paddingLeft {
-    padding-left: 200px;
+  padding-left: 200px;
 }
 
 .positionDesc {
-    position: absolute !important;
-    top: 50% !important;
-    right: 0 !important;
-    transform: translateY(-50%) !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 0 !important;
+  transform: translateY(-50%) !important;
 }
 
 .positionDesc-smartTV {
@@ -145,248 +143,240 @@ ul {
 }
 
 .positionDescLeft {
-    position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    padding-left: 36px;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  padding-left: 36px;
 }
 
-@media (min-width: 991.99px) and (max-width: 2199.98px) {
-    .spesifikasiDisplay {
+@media (min-width: 991.99px) {
+  .spesifikasiDisplay {
     font-weight: 700;
     font-size: 48px;
     line-height: 66px;
     padding: 20vh 0px 1vh 32vb;
   }
 
-    .spesifikasiPoints {
+  .spesifikasiPoints {
     font-weight: 200;
     font-size: 18px;
-    padding: 10px 0px 20vh 32vb; 
+    padding: 10px 0px 20vh 32vb;
     font-family: "Montserrat", sans-serif;
     line-height: 40px;
-    }
-    
+  }
 
-    .descBox {
+  .descBox {
     width: 36.3% !important;
     margin-right: 3%;
-    }
+  }
 }
 
 @media (max-width: 992px) {
   .cut-img {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 15%;
-    }
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 15%;
+  }
 
-  .cut-img2 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 78%;
-    }
+  .cut-img3 {
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 93%;
+  }
 
-    .cut-img3 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 93%;
-    }
+  .descTitle-products {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin: auto;
+    color: white;
+  }
 
-    .descTitle-products {
-      display: flex; 
-      justify-content: center;
-      align-items: left;
-      margin-top: 20px;
-      padding-top: 20px;
-      margin: auto;
-      color: white;
-    }
-
-    .descDesc-product {
-      height: 50%;
-      width: 70%;
-      padding-top: 20px;
-      padding-bottom: 60px;
-      text-align: center;
-      margin: auto;
-      color: white;
-      justify-content: center;
-    }
-
-    .contentItem {
+  .descDesc-product {
+    height: 50%;
+    width: 70%;
+    padding-top: 20px;
+    padding-bottom: 60px;
     text-align: center;
-    }
+    margin: auto;
+    color: white;
+    justify-content: center;
+  }
 
-    .spesifikasiDisplay {
+  .contentItem {
+    text-align: center;
+  }
+
+  .spesifikasiDisplay {
     font-weight: 700;
     font-size: 48px;
     line-height: 66px;
     padding: 20vh 0px 1vh 32vb;
   }
 
-    .spesifikasiPoints {
+  .spesifikasiPoints {
     font-weight: 200;
     font-size: 18px;
-    padding: 10px 0px 20vh 32vb; 
+    padding: 10px 0px 20vh 32vb;
     font-family: "Montserrat", sans-serif;
     line-height: 40px;
-    }
+  }
 
-    .descBox {
+  .descBox {
     width: 100% !important;
     margin-right: 0%;
-    }
+  }
 
-    .positionDesc {
+  .positionDesc {
     position: static !important;
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
-    }
+  }
 
-    .positionDesc-smartTV {
+  .positionDesc-smartTV {
     position: static !important;
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
-    }
+  }
 
-    .positionDescLeft {
-      position: static !important;
-      top: 0% !important;
-      right: 0 !important;
-      transform: translateY(0%) !important;
-      padding-right: 2vb;
-    }
+  .positionDescLeft {
+    position: static !important;
+    top: 0% !important;
+    right: 0 !important;
+    transform: translateY(0%) !important;
+    padding-right: 2vb;
+  }
 }
 
 @media (min-width: 437px) and (max-width: 991.98px) {
   .cut-img {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 15%;
-    }
-
-  .cut-img2 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 75%;
-    }
-
-    .cut-img3 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 93%;
-    }
-
-    .contentItem {
-    text-align: center;
-    }
-
-    .descBox {
-    width: 100% !important;
-    margin-right: 0%;
-    }
-
-    .spesifikasiDisplay {
-      padding: 10px 0px 1vh 10vb; 
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 15%;
   }
 
-    .spesifikasiPoints {
+  .cut-img2 {
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 85%;
+  }
+
+  .cut-img3 {
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 93%;
+  }
+
+  .contentItem {
+    text-align: center;
+  }
+
+  .descBox {
+    width: 100% !important;
+    margin-right: 0%;
+  }
+
+  .spesifikasiDisplay {
+    padding: 10px 0px 1vh 10vb;
+  }
+
+  .spesifikasiPoints {
     font-weight: 400;
     font-size: 16px;
-    padding: 10px 0px 20vh 8vb; 
+    padding: 10px 0px 20vh 8vb;
     font-family: "Montserrat", sans-serif;
     line-height: 35px;
-    }
+  }
 
-    .positionDesc {
+  .positionDesc {
     position: static !important;
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
-    }
+  }
 
-    .positionDescLeft {
-      position: static !important;
-      top: 0% !important;
-      right: 0 !important;
-      transform: translateY(0%) !important;
-      padding-left: 1vb;
-      padding-right: 2vb;
-    }
-
-    .positionDesc-smartTV {
+  .positionDescLeft {
     position: static !important;
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
-    }
+    padding-left: 1vb;
+    padding-right: 2vb;
+  }
 
-    .descTitle-products {
-      display: flex; 
-      justify-content: center;
-      align-items: left;
-      margin-top: 20px;
-      padding-top: 20px;
-      margin: auto;
-      color: white;
-      font-size: 30px;
-    }
+  .positionDesc-smartTV {
+    position: static !important;
+    top: 0% !important;
+    right: 0 !important;
+    transform: translateY(0%) !important;
+  }
+
+  .descTitle-products {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin: auto;
+    color: white;
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 437px) and (min-width: 345px) {
   .cut-img {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 15%;
-    }
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 15%;
+  }
 
   .cut-img2 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 75.5%;
-    }
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 85.5%;
+  }
 
-    .cut-img3 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 93%;
-    }
+  .cut-img3 {
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 93%;
+  }
 
   .spesifikasiDisplay {
     font-weight: 700;
     font-size: 1px;
-    padding: 10px 0px 1vh 20%; 
+    padding: 10px 0px 1vh 20%;
   }
 
-    .spesifikasiPoints {
+  .spesifikasiPoints {
     font-weight: 400;
     font-size: 15px;
-    padding: 0px 0px 20vh 10vb; 
+    padding: 0px 0px 20vh 10vb;
     font-family: "Montserrat", sans-serif;
     line-height: 25px;
     max-width: 40vb;
-    }
+  }
 
-    .positionDescLeft {
+  .positionDescLeft {
     position: static !important;
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
     padding-left: 2vb;
     padding-right: 2vb;
-    }
+  }
 }
 
 /* Galaxy Fold */
@@ -394,21 +384,21 @@ ul {
   .spesifikasiDisplay {
     font-weight: 700;
     font-size: 1px;
-    padding: 10px 0px 1vh 10%; 
+    padding: 10px 0px 1vh 10%;
   }
 
   .spesifikasiPoints {
     font-weight: 400;
     font-size: 12px;
-    padding: 0px 0px 20vh 2vb; 
+    padding: 0px 0px 20vh 2vb;
     font-family: "Montserrat", sans-serif;
     line-height: 22px;
     max-width: 40vb;
-    }
+  }
 
   .logo-digitec {
-      width: 75%;
-      height: 75%;
+    width: 75%;
+    height: 75%;
   }
 
   .spesifikasiFold {
@@ -416,54 +406,54 @@ ul {
   }
 
   .cut-img {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 15%;
-    }
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 15%;
+  }
 
   .cut-img2 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 76%;
-    }
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 85%;
+  }
 
-    .cut-img3 {
-      object-fit: cover;
-      width: 100%;
-      height: 90vw;
-      object-position: 93%;
-    }
+  .cut-img3 {
+    object-fit: cover;
+    width: 100%;
+    height: 90vw;
+    object-position: 93%;
+  }
 
-    .positionDescLeft {
+  .positionDescLeft {
     position: static !important;
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
     padding-left: 2vb;
     padding-right: 2vb;
-    }
+  }
 
-    .descTitle-products {
-      display: flex; 
-      justify-content: center;
-      align-items: left;
-      margin-top: 20px;
-      padding-top: 20px;
-      margin: auto;
-      color: white;
-      font-size: 20px;
-    }
+  .descTitle-products {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+  }
 
-    .descDesc-product {
-      height: 50%;
-      width: 100%;
-      padding-top: 20px;
-      padding-bottom: 60px;
-      text-align: center;
-      margin: auto;
-      color: white;
-      justify-content: center;
-    }
+  .descDesc-product {
+    height: 50%;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+    margin: auto;
+    color: white;
+    justify-content: center;
+  }
 }
