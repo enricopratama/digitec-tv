@@ -17,6 +17,9 @@ const config = require("./app/config/app");
 app.set("views", path.join(__dirname, "app/views"));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname+'/public'))); // Imported public folder 
+app.get("/sitemap.xml", (req, res) => {
+    res.sendFile(path.join(__dirname, "sitemap.xml"));
+  });
 
 // Routes:
 app.get('/', (req, res) => {
@@ -40,14 +43,21 @@ app.all('*', (req, res) => {
     res.render('page_404', { currentPage: 'page_404' });
   });
 
+// app.get("*", (req, res, next) => {
+// if (req.headers.host.startsWith("www.")) {
+//     res.redirect(301, `http://${req.headers.host.slice(4)}${req.originalUrl}`);
+// } else {
+//     next();
+// }
+// });
 
-app.get("*", (req, res, next) => {
-if (req.headers.host.startsWith("www.")) {
-    res.redirect(301, `http://${req.headers.host.slice(4)}${req.originalUrl}`);
-} else {
+app.use((req, res, next) => {
+    if (req.headers.host.startsWith('www.')) {
+      const newUrl = `http://${req.headers.host.slice(4)}${req.originalUrl}`;
+      return res.redirect(301, newUrl);
+    }
     next();
-}
-});
+  });
 
 app.listen(process.env.APP_PORT, function(err) {
     if (err) {

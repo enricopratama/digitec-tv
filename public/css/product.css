@@ -13,6 +13,18 @@ body {
   background-color: #404040;
   min-width: fit-content;
   font-family: "Poppins", sans-serif;
+  padding-top: 60px;
+}
+.bgGrey {
+  background-color: #404040;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.zIndex100 {
+  z-index: 100;
 }
 
 .carousel-caption {
@@ -49,7 +61,7 @@ body {
 
 h1,
 p {
-  color: black;
+  color: white;
 }
 
 h1 {

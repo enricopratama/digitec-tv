@@ -4,7 +4,6 @@ deploy-docker:
   tags:
     - lasagna
   script:
-    - cd /docker_folder/sofware_solution/digitec.lasagna.fira.id
     - cd /home/adadev/docker_folder/sofware_solution/digitec.lasagna.fira.id
     - git stash
     - git pull origin main
