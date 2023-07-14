@@ -13,8 +13,9 @@
 }
 
 p {
-  font-size: 14px;
   margin-bottom: -0.3rem;
+  font-size: calc(1rem + 1vw);
+  font-weight: 350;
 }
 
 body {

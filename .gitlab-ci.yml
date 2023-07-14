@@ -5,6 +5,7 @@ deploy-docker:
     - lasagna
   script:
     - cd /home/adadev/docker_folder/sofware_solution/digitec.lasagna.fira.id
+    - git config --global --add safe.directory "*"
     - git stash
     - git pull origin main
     - git stash pop
