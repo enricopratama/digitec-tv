@@ -38,6 +38,10 @@ app.get('/login', (req, res) => {
     res.render('login', { currentPage: 'login' });
 });
 
+// app.get('/login2', (req, res) => {
+//   res.render('login2', { currentPage: 'login2' });
+// });
+
 // Handling non matching request from the client (404 not found)
 app.all('*', (req, res) => {
     res.render('page_404', { currentPage: 'page_404' });

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login2.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <%- include('navbarNew') %>
+    <div class="loginBox">
+      <h2>Masuk</h2>
+      <form action="#">
+        <div class="userInputBox">
+          <input type="text" id="usernameInputBox" required />
+          <Label for="usernameInputBox">Nomor Telepon</Label>
+        </div>
+        <a href="#" type="submit">
+          <!-- span tag for button animation -->
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Submit
+        </a>
+      </form>
+    </div>
+    <%- include('footer') %> <%- include('scriptFooter') %>
+  </body>
+</html>

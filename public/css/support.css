@@ -19,7 +19,6 @@ h1.highlight {
   font-size: 24px;
   background: transparent;
   transition: 0.5s;
-  font-weight: 500;
 }
 
 h1.highlight:hover {
@@ -88,20 +87,11 @@ h1 {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
   font-family: "Work Sans", sans-serif;
-  font-weight: 600;
-}
-
-.descTitle {
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  margin-top: 20px;
-  padding-top: 20vh;
 }
 
 .descDesc {
   height: 50%;
-  width: 70%;
+  width: 80%;
   padding-top: 20vh;
   padding-bottom: 100px;
   text-align: left;
@@ -121,14 +111,32 @@ ul {
   z-index: 5;
   flex: 1;
   text-align: center;
+  backdrop-filter: blur(2px);
+  padding: 4px;
 }
+
+.manual-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d34f4f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.manual-button:hover {
+  background-color: #970c10;
+  color: white;
+}
+
 /* For Galaxy Fold */
 @media (max-width: 290px) {
-  .carousel-extend {
-    margin-top: 2rem;
-    padding-top: 2rem;
-  }
-
   .p {
     font-size: small;
   }

@@ -2,101 +2,26 @@
 <html lang="en">
   <head>
     <%- include('header') %>
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/loginNew.css" />
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <%- include('navbarNew') %>
-    <div class="col2-set row row-divided row-large" id="cutomer_login">
-
-        <div class="loginBox col-1 large-6 col pb-0">
-            <div class="account-login-inner">
-				<h3 class="uppercase">Login</h3>
-
-				<form class="woocommerce-form woocommerce-form-login login" method="post">
-
-					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-						<label for="username">Username or email address&nbsp;<span class="required">*</span></label>
-						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="" />					</p>
-					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-						<label for="password">Password&nbsp;<span class="required">*</span></label>
-						<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
-					</p>
-
-					<p class="form-row">
-						<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Remember me</span>
-						</label>
-						<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="3bdda64bb8" /><input type="hidden" name="_wp_http_referer" value="/?fbclid=IwAR3rEtoYRFfSdfuVzaE6n3qMIkdsUxUXC7WzDMoORFCAzrVmbdvky1G9LmI" />						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Log in">Log in</button>
-					</p>
-					<p class="woocommerce-LostPassword lost_password">
-						<a href="#">Forgot your password?</a>
-					</p>
-				</form>
-			</div>
-        
-        </div>
-
-        <div class="registerBox col-2 large-6 col pb-0" id="customer_register">
-            <div class="account-register-inner">
-                <h3 class="uppercase">Register</h3>
-                <form method="post" class="woocommerce-form woocomerce-form-register register">
-                    <p class="woocomerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label for="reg_email">
-                            "Email address&nbsp"
-                            <span class="required">*</span>
-                        </label>
-                        <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value>
-                    </p>
-                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label for="reg_password">
-                            "Password&nbsp"
-                            <span class="required">*</span>
-                        </label>
-                        <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password">
-                    </p>
-                    <p id="woo_reg_captcha" class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label for="reg_captcha">
-                            "Captcha&nbsp"
-                            <span class="required">*</span>
-                        </label>
-                        <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"></div>
-                    </p>
-                    <div name="g-recaptcha" class="g-recaptcha" data-callback="verifyCallback_woo_signup" data-sitekey="6Lf9USIcAAAAAODcU0JZA9fTOaQ9OlH14RDBkXYx" data-theme="light" data-size="normal">
-                        <div style="width: 304px; height: 78px;">
-                            <div>
-                                <iframe style="display: none;">
-                                    #document
-                                </iframe>
-                            </div>
-                            <script type="text/javascript">
-                                var verifyCallback_woo_signup = function(response) {
-                                    if(response.length!==0){ 
-                                        if (typeof woo_register_recaptcha_verified === "function") { 
-                                            woo_register_recaptcha_verified(response);
-                                        }
-                                    }
-                                };  
-                            </script>
-                            <div class="woocommerce-privacy-policy-text">
-                                <p>
-                                    "Data pribadi Anda akan digunakan untuk menunjang pengalaman Anda di seluruh situs web ini, untuk mengelola akses ke akun Anda, dan untuk tujuan lain yang dijelaskan dalam privacy policy kami."
-                                </p>
-                            </div>
-                            <p class="woocomerce-form-row form-row">
-                                <input type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="75341b5f2c">
-                                <input type="hidden" name="_wp_http_referer" value="/?fbclid=IwAR3rEtoYRFfSdfuVzaE6n3qMIkdsUxUXC7WzDMoORFCAzrVmbdvky1G9LmI">
-                                <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="Register">Register
-                                </button>
-                            </p>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-
-        </div>
+    <div class="login-container">
+      <div class="login-box">
+        <h1>Masuk</h1>
+        <form>
+          <!-- <input type="text" placeholder="Nomor Telepon" class="input" /> -->
+          <div class="userInputBox">
+            <input type="text" id="usernameInputBox" required />
+            <Label for="usernameInputBox">Nomor Telepon</Label>
+          </div>
+          <button type="submit" class="manual-button">Lanjut</button>
+        </form>
+      </div>
+      <div class="mask"></div>
     </div>
     <%- include('footer') %> <%- include('scriptFooter') %>
+    <script src="/javascript/cursorNormal.js"></script>
   </body>
 </html>

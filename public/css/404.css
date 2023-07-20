@@ -52,8 +52,8 @@ h1 {
 }
 
 .to-home-button {
-  background-color: #555555;
-  color: #ffffff;
+  background-color: grey;
+  color: white;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -63,4 +63,9 @@ h1 {
 
 .to-home-button:hover {
   background-color: #888888;
+  color: black;
+}
+
+.bggrey {
+  background-color: #555555;
 }
