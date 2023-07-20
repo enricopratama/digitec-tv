@@ -1,6 +1,6 @@
 // For scroll function:
     function handleScroll() { 
-        const logo = document.querySelector(".logo-digitec"); // Declare 'logo' variable here
+        const logo = document.querySelector(".logo-digitec"); 
         var scrollY = window.scrollY;
         if (scrollY > 100 && window.innerWidth > 992) {
             logo.style.width = "180px";

@@ -14,6 +14,3 @@ document.addEventListener('pointermove', (pos) => {
   mask.style.setProperty('--mouse-x', x + '%');
   mask.style.setProperty('--mouse-y', y + '%');
 });
-
-// @media (min-width: 451px) and (max-width: 1200px) {
-// @media (min-width: 300px) and (max-width: 450.98px) {
