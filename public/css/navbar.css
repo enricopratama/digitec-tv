@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.bg-white {
+  background-color: #f6f6f6;
+}
+
+.navbar-nav-custom .nav-link {
+  margin-right: 40px;
+}
+
+.navbar-nav-custom .nav-link,
+.navbar-brand {
+  padding-top: 12px;
+  padding-bottom: 11px;
+  font-size: 13px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  z-index: 500;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 7px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+}
+
+.nav-item a:hover {
+  color: white !important;
+}
+
+.nav-item2 {
+  margin-right: 7px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-item2 a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+}
+
+.nav-item2 a:hover {
+  color: white !important;
+}
+
+.navbar-nav-custom .nav-link {
+  font-weight: normal;
+}
+
+.navbar-nav-custom .nav-link.active {
+  font-weight: bold;
+}
+
+.widthPercent {
+  max-width: 100%;
+}
+
+@media (min-width: 993px) {
+  .logo-digitec {
+    transition: width 0.5s ease, max-width 0.5s ease;
+    width: 100%;
+    max-width: 260px;
+  }
+  .nav-item a:hover {
+    color: white !important;
+  }
+
+  .nav-item::after {
+    content: "";
+    display: block;
+    width: 20px !important;
+    height: 75px !important;
+    background-color: #d34f4f;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -16px;
+    left: 32%;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease, padding-right 0.3s ease;
+  }
+
+  .nav-item2 a:hover {
+    color: white !important;
+  }
+
+  .nav-item2::after {
+    content: "";
+    display: block;
+    width: 20px !important;
+    height: 75px !important;
+    background-color: #d34f4f;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -16px;
+    left: 29%;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease, padding-right 0.3s ease;
+  }
+
+  .nav-item a {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-item2 a {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nav-item:hover::after {
+    opacity: 1;
+    z-index: -1;
+    padding-right: 80px;
+  }
+
+  .nav-item2:hover::after {
+    opacity: 1;
+    z-index: -1;
+    padding-right: 80px;
+  }
+
+  .widthPercent {
+    max-width: 60%;
+  }
+
+  @media (max-width: 990px) {
+    /* .maxWidth {
+          max-width: 170px;
+        }
+  
+        .widthPercent {
+          max-width: 50%;
+        } */
+
+    .logo-digitec {
+      transition: width 0.5s ease, max-width 0.5s ease;
+      max-width: 170px !important;
+    }
+  }
+}

@@ -8,10 +8,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.whiteBg {
-  background-color: white;
-}
-
 p {
   font-size: 14px;
   color: black;
@@ -23,31 +19,25 @@ h1.highlight {
   font-size: 24px;
   background: transparent;
   transition: 0.5s;
-  font-weight: 600;
-  padding: 16px;
+  font-weight: 500;
 }
 
 h1.highlight:hover {
   font-size: 30px;
   background: white;
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(2px);
-  padding: 16px;
 }
 
 p.highlight {
   font-size: 14px;
   background: transparent;
   transition: 0.5s;
-  padding: 20px;
 }
 
 p.highlight:hover {
   font-size: 14px;
   background: white;
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(2px);
-  padding: 20px;
 }
 
 :root {
@@ -94,24 +84,6 @@ body {
   );
 }
 
-.content {
-  flex: 1;
-}
-
-.carousel-inner {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.grey-background {
-  background-color: #404040;
-  padding: 10px;
-  color: #fff;
-  width: 100%;
-  margin: 0;
-}
-
 h1 {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
@@ -122,17 +94,17 @@ h1 {
 .descTitle {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   margin-top: 20px;
-  padding-top: 20px;
+  padding-top: 20vh;
 }
 
 .descDesc {
   height: 50%;
   width: 70%;
-  padding-top: 20px;
+  padding-top: 20vh;
   padding-bottom: 100px;
-  text-align: center;
+  text-align: left;
   margin: auto;
 }
 
@@ -150,12 +122,6 @@ ul {
   flex: 1;
   text-align: center;
 }
-
-.carousel-extend {
-  margin-top: 1rem;
-  padding-top: 1rem;
-}
-
 /* For Galaxy Fold */
 @media (max-width: 290px) {
   .carousel-extend {
@@ -189,15 +155,6 @@ ul {
     );
   }
 }
-
-/* Other phones */
-@media (min-width: 300px) and (max-width: 450.98px) {
-  .carousel-extend {
-    margin-top: 2rem;
-    padding-top: 2rem;
-  }
-}
-
 @media (min-width: 820px) and (max-width: 1200px) {
   .mask {
     z-index: 0;
@@ -224,7 +181,7 @@ ul {
     z-index: 0;
     position: relative;
     width: 100vw;
-    height: 65vh;
+    height: 100vh;
     background-color: hsla(0, 0%, 100%, 0.9);
     mask: radial-gradient(
       circle at var(--mouse-x) var(--mouse-y),
