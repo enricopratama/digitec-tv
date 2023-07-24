@@ -140,18 +140,87 @@ ul {
   padding-left: 36px;
 }
 
+.section {
+  display: flex;
+  background: white;
+}
+.subsection {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+}
+
+.smallsection1,
+.smallsection2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  padding-right: 5vw;
+}
+
+.image1 {
+  max-width: 150px;
+}
+
+.buttonDesc {
+  color: #393939;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  min-width: 150px;
+  margin-bottom: 2px;
+}
+
+.buy-now-button {
+  padding-left: 16px;
+}
+
+.buy-button {
+  border-radius: 20px;
+  background-color: #d34f4f;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.manual-button {
+  border-radius: 10px;
+  background-color: #d34f4f;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.manual-button:hover {
+  background-color: #970c10;
+  color: white;
+}
+
 @media (min-width: 991.99px) {
   .spesifikasiDisplay {
     font-weight: 700;
     font-size: 48px;
     line-height: 66px;
-    padding: 20vh 0px 1vh 32vb;
+    padding: 5vh 7vw 1vh 0vb;
   }
 
   .spesifikasiPoints {
     font-weight: 200;
     font-size: 18px;
-    padding: 10px 0px 20vh 32vb;
+    padding: 10px 0px 20vh 8vb;
     font-family: "Montserrat", sans-serif;
     line-height: 40px;
   }

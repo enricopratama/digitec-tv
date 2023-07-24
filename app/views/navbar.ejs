@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('header') %>
+    <link rel="stylesheet" href="css/navbar.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-light bg-white navbar-nav-custom py-lg-3 px-lg-4 py-2 shadow-sm"
+      id="main-navbar"
+    >
+      <div class="container-fluid" id="main-navbar">
+        <a href="/" style="top: 42px" class="maxWidth widthPercent">
+          <img
+            id="logo-digitec"
+            class="d-inline-block align-top ml-0 ms-0 img-fluid logo-digitec pl-lg-8"
+            src="image/logonavnew.png"
+            alt="Logo"
+            style="
+              width: 100%;
+              top: 42px;
+              max-width: 280px;
+              padding-left: 1.5vw;
+            "
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav ms-auto mb-2 mb-lg-0 nav-list"
+            style="
+              padding-left: 25px;
+              font-family: 'Montserrat', sans-serif;
+              z-index: 100;
+            "
+          >
+            <li class="nav-item" style="z-index: 1000">
+              <a
+                class="nav-link <% if (currentPage === 'home') { %>active<% } %>"
+                style="z-index: 1000"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link <% if (currentPage === 'products') { %>active<% } %>"
+                href="products"
+                >Product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link <% if (currentPage === 'support') { %>active<% } %>"
+                href="support"
+                >Support</a
+              >
+            </li>
+            <li class="nav-item2">
+              <a
+                class="nav-link <% if (currentPage === 'login') { %>active<% } %>"
+                href="login"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script src="/javascript/navbarExpand.js"></script>
+  </body>
+</html>

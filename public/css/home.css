@@ -27,13 +27,13 @@ h1.highlight {
   padding: 16px;
 }
 
-h1.highlight:hover {
+/* h1.highlight:hover {
   font-size: 30px;
   background: white;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(2px);
   padding: 16px;
-}
+} */
 
 p.highlight {
   font-size: 14px;
@@ -42,13 +42,13 @@ p.highlight {
   padding: 20px;
 }
 
-p.highlight:hover {
+/* p.highlight:hover {
   font-size: 14px;
   background: white;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(2px);
   padding: 20px;
-}
+} */
 
 :root {
   --mouse-x: 50%;
@@ -74,28 +74,6 @@ body {
   background-size: cover;
   margin: 0;
   display: flex;
-}
-
-.mask {
-  z-index: 0;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: hsla(0, 0%, 100%, 0.9);
-  mask: radial-gradient(
-    circle at var(--mouse-x) var(--mouse-y),
-    transparent 40px,
-    black 150px
-  );
-  -webkit-mask: radial-gradient(
-    circle at var(--mouse-x) var(--mouse-y),
-    transparent 1px,
-    black 150px
-  );
-}
-
-.content {
-  flex: 1;
 }
 
 .carousel-inner {
@@ -170,24 +148,6 @@ ul {
   .h1 {
     font-size: 20px;
   }
-
-  .mask {
-    z-index: 0;
-    position: relative;
-    width: 100vw;
-    height: 200vh;
-    background-color: hsla(0, 0%, 100%, 0.9);
-    mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 40px,
-      black 150px
-    );
-    -webkit-mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 1px,
-      black 150px
-    );
-  }
 }
 
 /* Other phones */
@@ -195,46 +155,5 @@ ul {
   .carousel-extend {
     margin-top: 2rem;
     padding-top: 2rem;
-  }
-}
-
-@media (min-width: 820px) and (max-width: 1200px) {
-  .mask {
-    z-index: 0;
-    position: relative;
-    width: 100vw;
-    height: 75vh;
-    background-color: hsla(0, 0%, 100%, 0.9);
-    mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 40px,
-      black 150px
-    );
-    -webkit-mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 1px,
-      black 150px
-    );
-  }
-}
-
-/* Big Laptops */
-@media (min-width: 1210.98px) {
-  .mask {
-    z-index: 0;
-    position: relative;
-    width: 100vw;
-    height: 65vh;
-    background-color: hsla(0, 0%, 100%, 0.9);
-    mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 40px,
-      black 150px
-    );
-    -webkit-mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 1px,
-      black 150px
-    );
   }
 }

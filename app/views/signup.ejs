@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('header') %>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/mask.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/javascript/jquery-ui.js"></script>
+    <!-- Keith Wood Datepicker -->
+    <script type="text/javascript" src="javascript/jquery.plugin.js"></script>
+    <script type="text/javascript" src="javascript/jquery.datepick.js"></script>
+    <link rel="stylesheet" href="css/jquery.datepick.css" />
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <div class="login-container">
+      <div class="login-box">
+        <h1>Register Akun</h1>
+        <form>
+          <!--Nama Panjang-->
+          <div class="row">
+            <!-- Nama Depan -->
+            <div class="form-group mb-3 col">
+              <div class="userInputBox2">
+                <input type="text" id="usernameInputBox" required />
+                <Label for="usernameInputBox">Nama Depan</Label>
+              </div>
+            </div>
+
+            <!-- Nama Belakang -->
+            <div class="form-group mb-3 col">
+              <div class="userInputBox2">
+                <input type="text" id="usernameInputBox" required />
+                <Label for="usernameInputBox">Nama Belakang</Label>
+              </div>
+            </div>
+          </div>
+
+          <!--Email-->
+          <div class="form-group mb-3 col">
+            <div class="userInputBox">
+              <input type="email" id="usernameInputBox" required />
+              <Label for="usernameInputBox">Email</Label>
+            </div>
+          </div>
+
+          <!--No Telepon-->
+          <div class="form-group mb-3 col">
+            <div class="userInputBox">
+              <input type="tel" id="usernameInputBox" required />
+              <Label for="usernameInputBox">No Telp</Label>
+            </div>
+          </div>
+
+          <!--NIK-->
+          <div class="form-group mb-3 col">
+            <div class="userInputBox">
+              <input type="text" id="usernameInputBox" required />
+              <Label for="usernameInputBox">NIK</Label>
+            </div>
+          </div>
+
+          <!--Gender-->
+          <div class="form-group mb-3 col">
+            <div
+              class="userInputBox paddingLeft maxWidth"
+              style="padding-top: 6vh"
+            >
+              <select
+                class="form-control"
+                id="registerGender"
+                name="registerGender"
+                required
+              >
+                <option id="defaultValue" value="default" selected disabled>
+                  <!-- Pilih Jenis Kelamin -->
+                </option>
+                <option id="Male" value="Male">Male</option>
+                <option id="Female" value="Female">Female</option>
+              </select>
+              <label for="registerGender">Jenis Kelamin</label>
+            </div>
+          </div>
+
+          <!--Pilih Tanggal Lahir-->
+          <div class="form-group mb-3 col">
+            <div class="custom-date" id="registerDOB">
+              <label for="registerDOB">Tanggal Lahir</label>
+              <input
+                type="text"
+                name="registerDOB"
+                id="registerDOBInput"
+                placeholder="Pilih tanggal lahir"
+                class="form-control bg-white registerDOB"
+                readonly
+              />
+              <!-- <img
+                id="icon-calendar"
+                src="/image/icon-calendar.png"
+                alt="calendarIcon"
+              /> -->
+            </div>
+          </div>
+
+          <!--Kata Sandi-->
+          <div class="form-group mb-3 col">
+            <div class="userInputBox">
+              <input type="password" id="passwordInputBox" required />
+              <Label for="passwordInputBox">Kata Sandi</Label>
+              <i
+                id="togglePassword"
+                class="fa fa-eye-slash"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </div>
+
+          <!--Tombol Sign up-->
+          <button type="submit" class="manual-button">Sign Up</button>
+          <p class="signup-text">
+            Sudah memiliki akun?&nbsp;&nbsp;<a href="/login" class="signup-link"
+              >LOG IN</a
+            >
+          </p>
+        </form>
+      </div>
+      <div class="mask"></div>
+    </div>
+    <%- include('footer') %> <%- include('scriptFooter') %>
+    <script src="/javascript/cursorNormal.js"></script>
+    <script src="/javascript/datepicker.js"></script>
+    <script src="/javascript/eyeIcon.js"></script>
+  </body>
+</html>

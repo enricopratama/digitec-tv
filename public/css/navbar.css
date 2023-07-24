@@ -44,8 +44,13 @@
   padding: 5px 10px;
 }
 
-.nav-item a:hover {
-  color: white !important;
+@media (min-width: 992px) {
+  .nav-item a:hover {
+    color: white !important;
+  }
+  .nav-item2 a:hover {
+    color: white !important;
+  }
 }
 
 .nav-item2 {
@@ -58,10 +63,6 @@
   text-decoration: none;
   color: #333;
   padding: 5px 10px;
-}
-
-.nav-item2 a:hover {
-  color: white !important;
 }
 
 .navbar-nav-custom .nav-link {

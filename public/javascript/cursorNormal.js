@@ -1,14 +1,21 @@
 const mask = document.querySelector('.mask');
 
-document.addEventListener('pointermove', (pos) => {
+function updateMaskPosition(pos) {
   let x = (pos.clientX / window.innerWidth) * 100;
   let y = ((pos.clientY + window.pageYOffset) / window.innerHeight) * 100;
 
-  if (window.innerWidth < 290) {
-    y -= 30;
-  } else if (window.innerWidth > 300 && window.innerWidth < 821) {
-    y -= 10;
-  } 
+  y += 3;
+
   mask.style.setProperty('--mouse-x', x + '%');
   mask.style.setProperty('--mouse-y', y + '%');
+}
+
+document.addEventListener('pointermove', (pos) => {
+  updateMaskPosition(pos);
+});
+
+window.addEventListener('resize', () => {
+  // Recalculate mask position when the window is resized
+  const currentPos = { clientX: event.clientX, clientY: event.clientY };
+  updateMaskPosition(currentPos);
 });

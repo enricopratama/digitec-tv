@@ -2,21 +2,29 @@
 <html lang="en">
   <head>
     <%- include('header') %>
-    <link rel="stylesheet" href="css/loginNew.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/mask.css" />
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
-    <%- include('navbarNew') %>
+    <%- include('navbar') %>
     <div class="login-container">
       <div class="login-box">
         <h1>Masuk</h1>
         <form>
           <!-- <input type="text" placeholder="Nomor Telepon" class="input" /> -->
           <div class="userInputBox">
-            <input type="text" id="usernameInputBox" required />
+            <input type="tel" id="usernameInputBox" required />
             <Label for="usernameInputBox">Nomor Telepon</Label>
           </div>
           <button type="submit" class="manual-button">Lanjut</button>
+          <p class="signup-text">
+            Tidak memiliki akun?&nbsp;&nbsp;<a
+              href="/signup"
+              class="signup-link"
+              >SIGN UP</a
+            >
+          </p>
         </form>
       </div>
       <div class="mask"></div>

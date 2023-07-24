@@ -65,24 +65,6 @@ body {
   display: flex;
 }
 
-.mask {
-  z-index: 0;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: hsla(0, 0%, 100%, 0.9);
-  mask: radial-gradient(
-    circle at var(--mouse-x) var(--mouse-y),
-    transparent 40px,
-    black 150px
-  );
-  -webkit-mask: radial-gradient(
-    circle at var(--mouse-x) var(--mouse-y),
-    transparent 1px,
-    black 150px
-  );
-}
-
 h1 {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
@@ -125,7 +107,6 @@ ul {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
-  margin: 10px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -143,63 +124,5 @@ ul {
 
   .h1 {
     font-size: 20px;
-  }
-
-  .mask {
-    z-index: 0;
-    position: relative;
-    width: 100vw;
-    height: 200vh;
-    background-color: hsla(0, 0%, 100%, 0.9);
-    mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 40px,
-      black 150px
-    );
-    -webkit-mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 1px,
-      black 150px
-    );
-  }
-}
-@media (min-width: 820px) and (max-width: 1200px) {
-  .mask {
-    z-index: 0;
-    position: relative;
-    width: 100vw;
-    height: 75vh;
-    background-color: hsla(0, 0%, 100%, 0.9);
-    mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 40px,
-      black 150px
-    );
-    -webkit-mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 1px,
-      black 150px
-    );
-  }
-}
-
-/* Big Laptops */
-@media (min-width: 1210.98px) {
-  .mask {
-    z-index: 0;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsla(0, 0%, 100%, 0.9);
-    mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 40px,
-      black 150px
-    );
-    -webkit-mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 1px,
-      black 150px
-    );
   }
 }

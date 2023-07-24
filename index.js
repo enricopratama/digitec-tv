@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/products', (req, res) => {
-    res.render('productsNew', { currentPage: 'products' });
+    res.render('products', { currentPage: 'products' });
 });
 
 app.get('/support', (req, res) => {
@@ -36,6 +36,10 @@ app.get('/support', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.render('login', { currentPage: 'login' });
+});
+
+app.get('/signup', (req, res) => {
+  res.render('signup', { currentPage: 'signup' });
 });
 
 // app.get('/login2', (req, res) => {
