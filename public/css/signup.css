@@ -21,17 +21,6 @@ body {
 .login-box {
   overflow-y: scroll;
   max-height: 75vh;
-}
-
-.paddingLeft {
-  padding-left: 1.5vw;
-}
-
-.maxWidth {
-  max-width: 96%;
-}
-
-.login-box {
   position: absolute;
   z-index: 5;
   flex: 1;
@@ -42,7 +31,14 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 35vw;
   width: 100%;
-  top: 20%;
+}
+
+.paddingLeft {
+  padding-left: 1.5vw;
+}
+
+.maxWidth {
+  max-width: 96%;
 }
 
 select.form-control {
@@ -80,4 +76,243 @@ select.form-control:hover {
   .paddingLeft {
     padding-left: 35px;
   }
+}
+
+.pLeft {
+  padding-right: 17vw;
+  color: gray;
+}
+
+body {
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.login-container {
+  background-image: url("/image/tes-background.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  margin-bottom: 15px;
+}
+
+.login-box {
+  position: absolute;
+  z-index: 5;
+  flex: 1;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 35vw;
+  width: 100%;
+  top: 20%;
+}
+
+.login-box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: calc(1.375rem + 0.7vw);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.manual-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d34f4f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.manual-button:hover {
+  background-color: #970c10;
+  color: white;
+}
+
+.signup-text {
+  color: #333;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.signup-link {
+  color: blue;
+  text-align: center;
+  justify-content: center;
+  font: 12px;
+}
+/* Responsive styles */
+@media (max-width: 1035px) {
+  .login-box {
+    min-width: 80vw;
+  }
+}
+
+/* userInputBox overall Animations */
+/* userInputBox2 for nama depan & belakang */
+/* userInputBox3 for register DOB */
+.userInputBox,
+.userInputBox2,
+.userInputBox3 {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px 5px 0px 30px;
+}
+
+.userInputBox label,
+.userInputBox3 label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
+  transition: 0.5s;
+  padding-left: 20px; /* changed */
+  padding-left: 30px;
+}
+
+.userInputBox input,
+.userInputBox2 input {
+  /* Remove userInputBox3 for square input design */
+  width: 90%; /* changed */
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 0px;
+}
+
+.userInputBox3 input {
+  width: 90%; /* changed */
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 0px;
+  flex: 1;
+}
+
+.userInputBox input:focus ~ label,
+.userInputBox input:valid ~ label,
+.userInputBox2 input:focus ~ label,
+.userInputBox2 input:valid ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+.userInputBox2 label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  color: grey;
+  pointer-events: none;
+  transition: 0.5s;
+  padding-left: 30px;
+  padding-top: 20px;
+  min-width: 130px; /* For mobile version */
+}
+
+@media (max-width: 400px) {
+  .userInputBox2 label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: grey;
+    pointer-events: none;
+    transition: 0.5s;
+    padding-left: 10px;
+    padding-top: 20px;
+    min-width: 150px; /* For mobile version */
+  }
+}
+
+/* Galaxy Fold */
+@media (max-width: 290px) {
+  .userInputBox2 label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: grey;
+    pointer-events: none;
+    transition: 0.5s;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: 1052px) {
+  .userInputBox2 input {
+    width: 90%;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 0px;
+    max-width: 75%;
+  }
+}
+
+.formatCalendar {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  translate: -35px;
+}
+
+.leftTrans {
+  translate: -30px;
 }

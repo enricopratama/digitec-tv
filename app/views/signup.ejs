@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('header') %>
-    <link rel="stylesheet" href="css/login.css" />
+    <%- include('./partial/header') %>
     <link rel="stylesheet" href="css/mask.css" />
     <link rel="stylesheet" href="css/signup.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <!--jQuery-->
     <link href="css/datepicker/jquery.datepick.css" rel="stylesheet" />
@@ -18,8 +16,16 @@
     <script src="javascript/datepicker/jquery.datepick.js"></script>
     <script>
       $(function () {
-        $("#popupDatepicker").datepick();
-        $("#inlineDatepicker").datepick({ onSelect: showDate });
+        $("#popupDatepicker").datepick({
+          dateFormat: "dd-M-yyyy",
+          maxDate: "now",
+        });
+
+        $("#inlineDatepicker").datepick({
+          dateFormat: "dd-M-yyyy",
+          onSelect: showDate,
+          maxDate: "now",
+        });
       });
 
       function showDate(date) {
@@ -28,7 +34,7 @@
     </script>
   </head>
   <body>
-    <%- include('navbar') %>
+    <%- include('./partial/navbar') %>
     <div class="login-container">
       <div class="login-box">
         <h1>Register Akun</h1>
@@ -78,15 +84,13 @@
 
           <!--Gender-->
           <div class="form-group mb-3 col">
-            <div
-              class="userInputBox paddingLeft maxWidth"
-              style="padding-top: 6vh"
-            >
+            <div class="userInputBox maxWidth" style="padding-top: 6vh">
               <select
                 class="form-control"
                 id="registerGender"
                 name="registerGender"
                 required
+                aria-placeholder="Select Gender"
               >
                 <option id="defaultValue" value="default" selected disabled>
                   <!-- Pilih Jenis Kelamin -->
@@ -100,20 +104,21 @@
 
           <!--Pilih Tanggal Lahir-->
           <div class="form-group mb-3 col">
-            <div class="custom-date" id="registerDOB">
-              <!-- <label for="registerDOB">Tanggal Lahir</label> -->
+            <div class="userInputBox3" style="padding-top: 6vh">
               <input
                 type="text"
                 id="popupDatepicker"
-                placeholder="Pilih tanggal lahir"
                 class="form-control bg-white registerDOB"
                 readonly
+                placeholder="Pilih Tanggal Lahir"
               />
-              <!-- <img
-                id="icon-calendar"
+              <label for="registerGender">Tanggal Lahir</label>
+              <img
+                id="popupDatepicker"
                 src="/image/icon-calendar.png"
                 alt="calendarIcon"
-              /> -->
+                class="formatCalendar"
+              />
             </div>
           </div>
 
@@ -124,7 +129,7 @@
               <Label for="passwordInputBox">Kata Sandi</Label>
               <i
                 id="togglePassword"
-                class="fa fa-eye-slash"
+                class="fa fa-eye-slash leftTrans"
                 aria-hidden="true"
               ></i>
             </div>
@@ -141,9 +146,8 @@
       </div>
       <div class="mask"></div>
     </div>
-    <%- include('footer') %> <%- include('scriptFooter') %>
+    <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
     <script src="/javascript/cursorNormal.js"></script>
-    <script src="/javascript/datepicker.js"></script>
     <script src="/javascript/eyeIcon.js"></script>
   </body>
 </html>

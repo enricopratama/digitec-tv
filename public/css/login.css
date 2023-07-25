@@ -100,7 +100,6 @@ button {
   }
 }
 
-/* userInputBox Animations */
 .userInputBox {
   position: relative;
   margin-bottom: 30px;
@@ -132,59 +131,6 @@ button {
 
 .userInputBox input:focus ~ label,
 .userInputBox input:valid ~ label {
-  top: -20px;
-  font-size: 12px;
-  color: black;
-  font-weight: bold;
-}
-
-/* userInputBox2 Animations */
-.userInputBox2 {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.userInputBox2 label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 14px;
-  color: grey;
-  pointer-events: none;
-  transition: 0.5s;
-  padding-left: 2vw;
-}
-
-.userInputBox2 input {
-  width: 90%;
-  background: transparent;
-  outline: none;
-  border: 0;
-  color: black;
-  border-bottom: 1px solid black;
-  padding: 10px 0;
-  font-size: 16px;
-  border-radius: 0px;
-}
-
-@media (min-width: 1052px) {
-  .userInputBox2 input {
-    width: 90%;
-    background: transparent;
-    outline: none;
-    border: 0;
-    color: black;
-    border-bottom: 1px solid black;
-    padding: 10px 0;
-    font-size: 16px;
-    border-radius: 0px;
-    max-width: 75%;
-  }
-}
-
-.userInputBox2 input:focus ~ label,
-.userInputBox2 input:valid ~ label {
   top: -20px;
   font-size: 12px;
   color: black;
