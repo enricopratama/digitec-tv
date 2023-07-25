@@ -36,21 +36,23 @@
   <body>
     <%- include('./partial/navbar') %>
     <div class="login-container">
-      <div class="login-box">
+      <div class="login-box col-md-6 col-sm-12 col-xs-12">
         <h1>Register Akun</h1>
         <form>
           <!--Nama Panjang-->
           <div class="row">
             <!-- Nama Depan -->
-            <div class="form-group mb-3 col">
+            <div class="form-group mb-3 col-md">
               <div class="userInputBox2">
                 <input type="text" id="usernameInputBox" required />
-                <Label for="usernameInputBox">Nama Depan</Label>
+                <Label for="usernameInputBox" style="padding-right: 20px"
+                  >Nama Depan</Label
+                >
               </div>
             </div>
 
             <!-- Nama Belakang -->
-            <div class="form-group mb-3 col">
+            <div class="form-group mb-3 col-md">
               <div class="userInputBox2">
                 <input type="text" id="usernameInputBox" required />
                 <Label for="usernameInputBox">Nama Belakang</Label>
@@ -59,38 +61,38 @@
           </div>
 
           <!--Email-->
-          <div class="form-group mb-3 col">
+          <div class="form-group mb-3 col-md">
             <div class="userInputBox">
-              <input type="email" id="usernameInputBox" required />
+              <input type="tel" id="usernameInputBox" required />
               <Label for="usernameInputBox">Email</Label>
             </div>
           </div>
 
           <!--No Telepon-->
-          <div class="form-group mb-3 col">
+          <div class="form-group mb-3 col-md">
             <div class="userInputBox">
-              <input type="tel" id="usernameInputBox" required />
+              <input type="number" id="usernameInputBox" required />
               <Label for="usernameInputBox">No Telp</Label>
             </div>
           </div>
 
           <!--NIK-->
-          <div class="form-group mb-3 col">
+          <div class="form-group mb-3 col-md">
             <div class="userInputBox">
-              <input type="text" id="usernameInputBox" required />
+              <input type="number" id="usernameInputBox" required />
               <Label for="usernameInputBox">NIK</Label>
             </div>
           </div>
 
           <!--Gender-->
-          <div class="form-group mb-3 col">
-            <div class="userInputBox maxWidth" style="padding-top: 6vh">
+          <div class="form-group mb-3 col-md">
+            <div class="userInputBox3 maxWidth" style="padding-top: 6vh">
               <select
                 class="form-control"
                 id="registerGender"
                 name="registerGender"
                 required
-                aria-placeholder="Select Gender"
+                placeholder="Select Gender"
               >
                 <option id="defaultValue" value="default" selected disabled>
                   <!-- Pilih Jenis Kelamin -->
@@ -103,7 +105,7 @@
           </div>
 
           <!--Pilih Tanggal Lahir-->
-          <div class="form-group mb-3 col">
+          <div class="form-group mb-3 col-md">
             <div class="userInputBox3" style="padding-top: 6vh">
               <input
                 type="text"
@@ -123,7 +125,7 @@
           </div>
 
           <!--Kata Sandi-->
-          <div class="form-group mb-3 col">
+          <div class="form-group mb-3 col-md">
             <div class="userInputBox">
               <input type="password" id="passwordInputBox" required />
               <Label for="passwordInputBox">Kata Sandi</Label>

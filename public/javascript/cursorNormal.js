@@ -4,7 +4,7 @@ function updateMaskPosition(pos) {
   let x = (pos.clientX / window.innerWidth) * 100;
   let y = ((pos.clientY + window.pageYOffset) / window.innerHeight) * 100;
 
-  y += 3;
+
 
   mask.style.setProperty('--mouse-x', x + '%');
   mask.style.setProperty('--mouse-y', y + '%');

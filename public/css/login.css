@@ -94,7 +94,7 @@ button {
   font: 12px;
 }
 /* Responsive styles */
-@media (max-width: 1035px) {
+@media (max-width: 725px) {
   .login-box {
     min-width: 80vw;
   }

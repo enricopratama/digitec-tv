@@ -7,12 +7,12 @@
   mask: radial-gradient(
     circle at var(--mouse-x) var(--mouse-y),
     transparent 5px,
-    black 100px
+    black 50px
   );
   -webkit-mask: radial-gradient(
     circle at var(--mouse-x) var(--mouse-y),
     transparent 0.005px,
-    black 100px
+    black 50px
   );
 }
 
