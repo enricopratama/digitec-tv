@@ -4,6 +4,7 @@
     <%- include('./partial/header') %>
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/mask.css" />
+    <title>Login</title>
     <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
@@ -14,10 +15,12 @@
         <form>
           <!-- <input type="text" placeholder="Nomor Telepon" class="input" /> -->
           <div class="userInputBox">
-            <input type="tel" id="usernameInputBox" required />
+            <input type="number" id="usernameInputBox" pattern="\d+" required />
             <Label for="usernameInputBox">Nomor Telepon</Label>
           </div>
-          <button type="submit" class="manual-button">Lanjut</button>
+          <button type="submit" class="manual-button" onclick="validateInput()">
+            Lanjut
+          </button>
           <p class="signup-text">
             Tidak memiliki akun?&nbsp;&nbsp;<a
               href="/signup"
@@ -31,5 +34,32 @@
     </div>
     <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
     <script src="/javascript/cursorNormal.js"></script>
+    <script>
+      function validateInput() {
+        // Get the input value
+        const inputBox = document.getElementById("usernameInputBox");
+        const inputValue = inputBox.value.trim();
+
+        // Define a regular expression pattern to match numbers only
+        const numberPattern = /^\d+$/;
+
+        // Check if the input matches the number pattern
+        if (numberPattern.test(inputValue)) {
+          // Input is valid, proceed with your logic here (e.g., submit the form)
+          alert("Input is valid.");
+        } else if (inputValue === "") {
+          // Input is empty, display a custom alert message
+          showCustomAlert("Input cannot be empty.");
+        } else {
+          // Input is not valid, display a custom alert message
+          showCustomAlert("Input must contain numbers only.");
+        }
+      }
+
+      function showCustomAlert(message) {
+        // Customize your alert here (e.g., use a modal, custom div, etc.)
+        alert(message);
+      }
+    </script>
   </body>
 </html>

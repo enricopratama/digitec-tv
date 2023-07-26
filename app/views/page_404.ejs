@@ -3,8 +3,10 @@
 <head>
     <%- include('./partial/header') %>
     <link rel="stylesheet" href="css/404.css">
+    <link rel="stylesheet" href="css/mask.css" />
+    <title>Page Not Found!</title>
 </head>
-<body style="background-color: #404040;">
+<body>
     <%- include('./partial/navbar') %>
     <div class="container-fluid content-wrap text-center align-items-center d-flex justify-content-center" style="margin: auto;">
         <div class="text-404">
@@ -12,8 +14,10 @@
                 404
             </p>
             <p class="font-desc" style="color: white;">Sorry Page Not Found!</p>
-            <a href="/" class="btn mt-3 border-0 to-home-button">Back To Home Page</a>
+            <a href="/" class="btn mt-3 to-home-button">Back To Home Page</a>
+            
         </div>
+        
     </div>
     <%- include('./partial/footer') %> <%- include('./partial/scriptFooter')
     %>

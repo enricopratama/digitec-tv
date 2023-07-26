@@ -22,7 +22,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #404040;
+  /* background-image: url("/image/tes-background.jpg"); */
+  background-color: gray;
 }
 
 .content {
@@ -52,18 +53,22 @@ h1 {
 }
 
 .to-home-button {
-  background-color: grey;
-  color: white;
+  display: inline-block;
   padding: 10px 20px;
-  border-radius: 5px;
+  background-color: #d34f4f;
+  color: white;
   border: none;
-  transition: background-color 0.3s;
-  margin-top: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .to-home-button:hover {
-  background-color: #888888;
-  color: black;
+  background-color: #970c10;
+  color: white;
 }
 
 .bggrey {

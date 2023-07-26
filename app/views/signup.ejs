@@ -4,6 +4,7 @@
     <%- include('./partial/header') %>
     <link rel="stylesheet" href="css/mask.css" />
     <link rel="stylesheet" href="css/signup.css" />
+    <title>Sign Up</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -36,7 +37,7 @@
   <body>
     <%- include('./partial/navbar') %>
     <div class="login-container">
-      <div class="login-box col-md-6 col-sm-12 col-xs-12">
+      <div class="login-box col-md-6 col-sm-12 col-xs-12 padLeft">
         <h1>Register Akun</h1>
         <form>
           <!--Nama Panjang-->
@@ -93,10 +94,14 @@
                 name="registerGender"
                 required
                 placeholder="Select Gender"
+                style="width: 95%"
               >
-                <option id="defaultValue" value="default" selected disabled>
-                  <!-- Pilih Jenis Kelamin -->
-                </option>
+                <option
+                  id="defaultValue"
+                  value="default"
+                  selected
+                  disabled
+                ></option>
                 <option id="Male" value="Male">Male</option>
                 <option id="Female" value="Female">Female</option>
               </select>

@@ -42,6 +42,10 @@ app.get('/signup', (req, res) => {
   res.render('signup', { currentPage: 'signup' });
 });
 
+app.get('/test', (req, res) => {
+  res.render('test', { currentPage: 'test' });
+});
+
 // app.get('/login2', (req, res) => {
 //   res.render('login2', { currentPage: 'login2' });
 // });
