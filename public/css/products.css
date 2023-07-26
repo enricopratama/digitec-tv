@@ -220,21 +220,24 @@ ul {
 }
 
 .manual-button {
-  border-radius: 10px;
+  display: inline-block;
+  padding: 4px 8px 4px 8px;
   background-color: #d34f4f;
   color: white;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: bold;
   border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .manual-button:hover {
   background-color: #970c10;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0.8, 0.1);
 }
 
 @media (min-width: 991.99px) {

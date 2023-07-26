@@ -13,7 +13,7 @@
 }
 
 p {
-  margin-bottom: -0.3rem;
+  margin-bottom: -0.5rem !important;
   font-size: calc(1rem + 1vw);
   font-weight: 350;
 }
@@ -56,21 +56,52 @@ h1 {
   display: inline-block;
   padding: 10px 20px;
   background-color: #d34f4f;
-  color: white;
   border: none;
   border-radius: 10px;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  color: white;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .to-home-button:hover {
   background-color: #970c10;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0.8, 0.1);
 }
 
-.bggrey {
-  background-color: #555555;
+.font-title {
+  color: black;
+}
+
+.glow-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 0 0 rgba(0, 123, 255, 0.5);
+  animation: pulsing-glow 1.5s infinite;
+}
+
+@keyframes pulsing-glow {
+  0% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.8);
+  }
+  50% {
+    opacity: 0.2;
+    box-shadow: 0 0 20px 20px rgba(0, 123, 255, 0);
+  }
+  100% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 40px rgba(0, 123, 255, 0);
+  }
 }

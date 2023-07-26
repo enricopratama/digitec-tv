@@ -94,12 +94,14 @@ h1 {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .manual-button:hover {
   background-color: #970c10;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0.8, 0.1);
 }
 
 .button-container {

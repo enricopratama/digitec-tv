@@ -3,30 +3,24 @@
   padding: 0;
 }
 
+@media (min-width: 570px) {
+  .spotlight {
+    z-index: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: radial-gradient(
+      circle,
+      transparent 10px,
+      rgba(255, 255, 255, 0.85)
+    );
+  }
+}
+
 /* body {
   background: rgba(0, 0, 0, 0.9) url("/image/tes-background.jpg") no-repeat
     center;
   background-size: cover;
   height: 100vh; 
 } */
-
-.bgMask {
-  background: rgba(0, 0, 0, 0.9) url("/image/tes-background.jpg") no-repeat
-    center;
-  background-size: cover;
-  height: 100%;
-  cursor: none;
-}
-
-.spotlight {
-  z-index: 0;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-
-  background-image: radial-gradient(
-    circle at 50% 50%,
-    transparent 10px,
-    rgba(255, 255, 255, 0.85)
-  );
-}
