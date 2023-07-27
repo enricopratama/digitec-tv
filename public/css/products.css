@@ -29,10 +29,6 @@ body {
 
 .grey-background {
   background-color: #404040;
-  padding: 10px;
-  color: #fff;
-  width: 100%;
-  margin: 0;
 }
 
 h1,
@@ -50,23 +46,6 @@ p {
   font-size: 12px;
 }
 
-.descTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  padding-top: 20px;
-}
-
-.descDesc {
-  height: 50%;
-  width: 70%;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  text-align: center;
-  margin: auto;
-}
-
 ul {
   list-style-type: disc;
   color: black;
@@ -75,7 +54,7 @@ ul {
   font-weight: light;
 }
 
-.descDesc-product {
+.descDesc {
   width: 358px;
   height: 128px;
   text-align: left;
@@ -86,7 +65,7 @@ ul {
   padding-top: 10px;
 }
 
-.descTitle-products {
+.descTitle {
   display: flex;
   justify-content: left;
   align-items: left;
@@ -161,34 +140,15 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  padding-right: 5vw;
+  width: 21%;
 }
 
-@media screen and (max-width: 820px) {
-  .smallsection1,
-  .smallsection2 {
-    flex: 0 0 100%;
-    transform: translateY(-50px);
-    padding-bottom: 10vw;
-  }
+.heightImage {
+  height: 150px;
+}
 
-  .section {
-    display: flex;
-    background: white;
-    flex-wrap: wrap;
-  }
-
-  .subsection {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding-right: 20vw;
-  }
+.heightImage2 {
+  height: 180px;
 }
 
 .image1 {
@@ -240,6 +200,70 @@ ul {
   box-shadow: 0 0 8px rgba(0, 0, 0.8, 0.1);
 }
 
+@media (min-width: 1020px) {
+  .translateLeft2 {
+    translate: 30px;
+  }
+
+  .smallsection1,
+  .smallsection2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 21%;
+    padding-right: 5vw;
+  }
+
+  .formatImage {
+    padding-left: 62px;
+    translate: -100px;
+  }
+
+  .formatImage2 {
+    translate: -30px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .formatImage {
+    translate: -40px;
+  }
+
+  .formatImage2 {
+    translate: -61px;
+  }
+
+  .translateLeft1 {
+    translate: -1px;
+  }
+
+  .smallsection1,
+  .smallsection2 {
+    flex: 0 0 100%;
+    transform: translateY(-50px);
+    padding-bottom: 10vw;
+    align-items: center;
+  }
+
+  .section {
+    display: flex;
+    background: white;
+    flex-wrap: wrap;
+  }
+
+  .subsection {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-right: 20vw;
+  }
+}
+
 @media (min-width: 991.99px) {
   .spesifikasiDisplay {
     font-weight: 700;
@@ -266,18 +290,25 @@ ul {
   .cut-img {
     object-fit: cover;
     width: 100%;
-    height: 90vw;
+    height: 90vw !important;
     object-position: 15%;
+  }
+
+  .cut-img2 {
+    object-fit: cover;
+    width: 100%;
+    height: 90vw !important;
+    object-position: 85%;
   }
 
   .cut-img3 {
     object-fit: cover;
     width: 100%;
-    height: 90vw;
+    height: 90vw !important;
     object-position: 93%;
   }
 
-  .descTitle-products {
+  .descTitle {
     display: flex;
     justify-content: center;
     align-items: left;
@@ -285,9 +316,10 @@ ul {
     padding-top: 20px;
     margin: auto;
     color: white;
+    text-align: center;
   }
 
-  .descDesc-product {
+  .descDesc {
     height: 50%;
     width: 70%;
     padding-top: 20px;
@@ -346,27 +378,6 @@ ul {
 }
 
 @media (min-width: 437px) and (max-width: 991.98px) {
-  .cut-img {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 15%;
-  }
-
-  .cut-img2 {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 85%;
-  }
-
-  .cut-img3 {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 93%;
-  }
-
   .contentItem {
     text-align: center;
   }
@@ -411,7 +422,7 @@ ul {
     transform: translateY(0%) !important;
   }
 
-  .descTitle-products {
+  .descTitle {
     display: flex;
     justify-content: center;
     align-items: left;
@@ -420,31 +431,32 @@ ul {
     margin: auto;
     color: white;
     font-size: 30px;
+    text-align: center;
+  }
+
+  .descTitle-right {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin: auto;
+    color: white;
+    font-size: 30px;
+    text-align: center;
   }
 }
 
 @media (max-width: 437px) and (min-width: 345px) {
-  .cut-img {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 15%;
+  .heightImage {
+    height: 120px;
+    padding-left: 24px;
   }
 
-  .cut-img2 {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 85.5%;
+  .heightImage2 {
+    height: 150px;
+    padding-left: 24px;
   }
-
-  .cut-img3 {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 93%;
-  }
-
   .spesifikasiDisplay {
     font-weight: 700;
     font-size: 1px;
@@ -472,6 +484,15 @@ ul {
 
 /* Galaxy Fold */
 @media (max-width: 344px) {
+  .heightImage {
+    height: 80px;
+    padding-left: 60px;
+  }
+
+  .heightImage2 {
+    height: 100px;
+    padding-left: 63px;
+  }
   .spesifikasiDisplay {
     font-weight: 700;
     font-size: 1px;
@@ -496,27 +517,6 @@ ul {
     font-size: 22px;
   }
 
-  .cut-img {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 15%;
-  }
-
-  .cut-img2 {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 85%;
-  }
-
-  .cut-img3 {
-    object-fit: cover;
-    width: 100%;
-    height: 90vw;
-    object-position: 93%;
-  }
-
   .positionDescLeft {
     position: static !important;
     top: 0% !important;
@@ -526,7 +526,7 @@ ul {
     padding-right: 2vb;
   }
 
-  .descTitle-products {
+  .descTitle {
     display: flex;
     justify-content: center;
     align-items: left;
@@ -535,9 +535,10 @@ ul {
     margin: auto;
     color: white;
     font-size: 20px;
+    text-align: center;
   }
 
-  .descDesc-product {
+  .descDesc {
     height: 50%;
     width: 100%;
     padding-top: 20px;

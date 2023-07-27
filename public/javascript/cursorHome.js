@@ -6,6 +6,10 @@ function updateMaskPosition(pos) {
 
   y -= window.innerWidth * 0.0575; // Optimization for home screen
 
+  if(window.innerWidth >= 1450) {
+    y += window.innerWidth * 0.03;
+  } 
+
   mask.style.setProperty('--mouse-x', x + '%');
   mask.style.setProperty('--mouse-y', y + '%');
 }
@@ -15,7 +19,7 @@ document.addEventListener('pointermove', (pos) => {
 });
 
 window.addEventListener('resize', () => {
-  // Recalculate mask position when the window is resized
+
   const currentPos = { clientX: event.clientX, clientY: event.clientY };
   updateMaskPosition(currentPos);
 });
