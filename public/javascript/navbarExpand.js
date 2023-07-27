@@ -4,10 +4,10 @@
         var scrollY = window.scrollY;
         if (scrollY > 100 && window.innerWidth > 992) {
             logo.style.width = "180px";
-        } else if (window.innerWidth < 450) {
+        } else if (window.innerWidth < 450 && scrollY >= 0) {
             logo.style.width = "60vw";
         } else {
-            logo.style.width = "100%";
+            logo.style.width = "100%"; 
         }
     }
     window.addEventListener("scroll", handleScroll);

@@ -150,17 +150,15 @@
   }
 
   @media (max-width: 990px) {
-    /* .maxWidth {
-          max-width: 170px;
-        }
-  
-        .widthPercent {
-          max-width: 50%;
-        } */
-
     .logo-digitec {
       transition: width 0.5s ease, max-width 0.5s ease;
       max-width: 170px !important;
     }
+  }
+}
+
+@media (max-width: 380px) {
+  .widthPercent {
+    max-width: 70%;
   }
 }
