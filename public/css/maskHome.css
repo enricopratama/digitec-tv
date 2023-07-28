@@ -7,34 +7,13 @@
   mask: radial-gradient(
     circle at var(--mouse-x) var(--mouse-y),
     transparent 5px,
-    /* Reduced from 10px to 5px for smaller radius */ black 50px
+    black 50px
   );
   -webkit-mask: radial-gradient(
     circle at var(--mouse-x) var(--mouse-y),
     transparent 0.005px,
-    /* Reduced from 0.01px to 0.005px for smaller radius */ black 50px
+    black 50px
   );
-}
-
-/* For big screens */
-@media (min-width: 1200px) {
-  .mask {
-    z-index: 0;
-    position: relative;
-    width: 100vw;
-    height: 90vh;
-    background-color: hsla(0, 0%, 100%, 0.9);
-    mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 5px,
-      black 50px
-    );
-    -webkit-mask: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y),
-      transparent 0.005px,
-      black 50px
-    );
-  }
 }
 
 /* For normal phones */
@@ -57,21 +36,9 @@
     );
   }
 }
-/* Adjustments for different window sizes */
-@media (max-width: 290px) {
-  .mask {
-    --mouse-y: calc(var(--mouse-y) - 30%);
-  }
-}
-
-@media (min-width: 291px) and (max-width: 820px) {
-  .mask {
-    --mouse-y: calc(var(--mouse-y) - 10%);
-  }
-}
 
 /* For Galaxy Fold */
-@media (max-width: 290px) {
+@media (max-width: 373px) {
   .mask {
     z-index: 0;
     position: relative;
@@ -90,3 +57,16 @@
     );
   }
 }
+
+/* Adjustments for different window sizes */
+/* @media (max-width: 290px) {
+  .mask {
+    --mouse-y: calc(var(--mouse-y) - 30%);
+  }
+}
+
+@media (min-width: 291px) and (max-width: 820px) {
+  .mask {
+    --mouse-y: calc(var(--mouse-y) - 10%);
+  }
+} */

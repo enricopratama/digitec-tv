@@ -78,7 +78,6 @@ body {
   background-size: cover;
   margin: 0;
   display: flex;
-  cursor: none; /* Change if want cursor */
 }
 
 .carousel-inner {
