@@ -16,19 +16,19 @@
   /* display: flex; */
 }
 
-p {
+/* p {
   font-size: 14px;
   color: black;
   font-family: "Poppins", sans-serif;
   font-family: "Work Sans", sans-serif;
-}
+} */
 
 h1.highlight {
   font-size: 24px;
   background: transparent;
-  transition: 0.5s;
+  transition: 0.2s;
   font-weight: 600;
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 /* h1.highlight:hover {
@@ -40,10 +40,11 @@ h1.highlight {
 } */
 
 p.highlight {
-  font-size: 14px;
+  font-size: calc(0.5rem + 0.6vw);
   background: transparent;
-  transition: 0.5s;
-  padding: 20px;
+  transition: 0.2s;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* p.highlight:hover {
@@ -78,6 +79,7 @@ body {
   background-size: cover;
   margin: 0;
   display: flex;
+  cursor: none;
 }
 
 .carousel-inner {
@@ -138,6 +140,15 @@ ul {
   padding-top: 1rem;
 }
 
+@media (min-width: 451px) and (max-width: 992px) {
+  p.highlight {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-family: "Work Sans", sans-serif;
+    font-size: calc(0.6rem + 1vw);
+  }
+}
+
 /* For Galaxy Fold */
 @media (max-width: 290px) {
   .carousel-extend {
@@ -145,8 +156,11 @@ ul {
     padding-top: 2rem;
   }
 
-  .p {
-    font-size: small;
+  p.highlight {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-family: "Work Sans", sans-serif;
+    font-size: calc(0.6rem + 1vw);
   }
 
   .h1 {
@@ -159,5 +173,13 @@ ul {
   .carousel-extend {
     margin-top: 2rem;
     padding-top: 2rem;
+  }
+
+  p.highlight {
+    font-size: calc(0.6rem + 1vw);
+    background: transparent;
+    transition: 0.2s;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
