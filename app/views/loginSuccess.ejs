@@ -11,20 +11,43 @@
     />
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <!--jQuery-->
+    <link href="css/datepicker/jquery.datepick.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="javascript/datepicker/jquery.plugin.min.js"></script>
+    <script src="javascript/datepicker/jquery.datepick.js"></script>
+    <script>
+      $(function () {
+        $("#popupDatepicker").datepick({
+          dateFormat: "dd-M-yyyy",
+          maxDate: "now",
+        });
+
+        $("#inlineDatepicker").datepick({
+          dateFormat: "dd-M-yyyy",
+          onSelect: showDate,
+          maxDate: "now",
+        });
+      });
+
+      function showDate(date) {
+        alert("The date chosen is " + date);
+      }
+    </script>
   </head>
   <body>
     <%- include('./partial/navbar') %>
     <div class="login-container">
       <div class="login-box col-md-6 col-sm-12 col-xs-12 padLeft">
-        <h1>Welcome Back!</h1>
+        <h1>Welome Back!</h1>
         <form>
           <!--No Telepon-->
           <div class="form-group mb-3 col-md">
             <div class="userInputBox">
-              <input type="tel" id="usernameInputBox" required />
+              <input type="tel" id="telephoneInputBox" required />
               <Label for="usernameInputBox">Nomor Telepon</Label>
             </div>
           </div>
+
           <!--Kata Sandi-->
           <div class="form-group mb-3 col-md">
             <div class="userInputBox">
@@ -38,17 +61,8 @@
             </div>
           </div>
 
-          <!--Tombol Log In-->
-          <button type="submit" class="manual-button" onclick="validateInput()">
-            Lanjut
-          </button>
-          <p class="signup-text">
-            Tidak memiliki akun?&nbsp;&nbsp;<a
-              href="/signup"
-              class="signup-link"
-              >SIGN UP</a
-            >
-          </p>
+          <!--Tombol Sign up-->
+          <button type="submit" class="manual-button">Sign In</button>
         </form>
       </div>
       <div class="mask"></div>
@@ -57,7 +71,7 @@
     <script src="/javascript/cursorNormal.js"></script>
     <script src="/javascript/eyeIcon.js"></script>
     <script>
-      const inputBox = document.getElementById("usernameInputBox");
+      const inputBox = document.getElementById("telephoneInputBox");
       inputBox.addEventListener("input", (event) => {
         event.target.value = event.target.value.replace(/\D/g, "");
       });
