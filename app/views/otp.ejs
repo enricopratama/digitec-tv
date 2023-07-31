@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partial/header') %>
+    <link rel="stylesheet" href="css/otp.css" />
+    <link rel="stylesheet" href="css/mask.css" />
+    <title>Verification Code</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </head>
+  <body>
+    <%- include('./partial/navbar') %>
+    <div class="login-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="login-box">
+        <h1>Masukkan Kode OTP</h1>
+        <p>
+          Kami baru saja mengirimkan 6-digit kode verifikasi ke nomor +62
+          *******4795
+        </p>
+        <form id="otpForm">
+          <div id="otp" class="inputs d-flex text-center">
+            <input
+              class="m-sm-2 px-1 text-center form-control input_otp"
+              name="input_otp"
+              type="tel"
+              id="first_otp"
+              maxlength="1"
+              required
+              autofocus
+              style="height: 55px"
+              inputmode="numeric"
+            />
+            <input
+              class="m-sm-2 px-1 text-center form-control input_otp"
+              name="input_otp"
+              type="tel"
+              id="second_otp"
+              maxlength="1"
+              required
+              style="height: 55px"
+              inputmode="numeric"
+            />
+            <input
+              class="m-sm-2 px-1 text-center form-control input_otp"
+              name="input_otp"
+              type="tel"
+              id="third_otp"
+              maxlength="1"
+              required
+              style="height: 55px"
+              inputmode="numeric"
+            />
+            <input
+              class="m-sm-2 px-1 text-center form-control input_otp"
+              name="input_otp"
+              type="tel"
+              id="fourth_otp"
+              maxlength="1"
+              required
+              style="height: 55px"
+              inputmode="numeric"
+            />
+            <input
+              class="m-sm-2 px-1 text-center form-control input_otp"
+              name="input_otp"
+              type="tel"
+              id="fifth_otp"
+              maxlength="1"
+              required
+              style="height: 55px"
+              inputmode="numeric"
+            />
+            <input
+              class="m-sm-2 px-1 text-center form-control input_otp"
+              name="input_otp"
+              type="tel"
+              id="sixth_otp"
+              maxlength="1"
+              required
+              style="height: 55px"
+              inputmode="numeric"
+            />
+          </div>
+
+          <button type="submit" class="manual-button">Verify OTP</button>
+        </form>
+        <p id="countdown-text" class="countdown-text">
+          Mohon tunggu <span id="countdown" style="color: red"></span> detik
+          untuk mengirim ulang lagi.
+        </p>
+      </div>
+      <div class="mask"></div>
+    </div>
+    <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
+    <script src="/javascript/cursorNormal.js"></script>
+    <script>
+      document
+        .getElementById("first_otp")
+        .addEventListener("paste", function (event) {
+          const otpInputFields = document.querySelectorAll(".input_otp");
+          const clipboardData = event.clipboardData || window.clipboardData;
+          const pastedData = clipboardData.getData("text");
+
+          if (pastedData.length === 6) {
+            for (let i = 0; i < pastedData.length; i++) {
+              otpInputFields[i].value = pastedData[i];
+            }
+
+            // Set focus to the last OTP input field
+            otpInputFields[otpInputFields.length - 1].focus();
+          }
+        });
+
+      // Function to enable or disable pointer events for the OTP input field
+      function enablePointerEvents(inputElement, enabled) {
+        const pointerEventsValue = enabled ? "auto" : "none";
+        inputElement.style.pointerEvents = pointerEventsValue;
+      }
+
+      // Function to handle OTP input navigation
+      function handleOTPInputNavigation(event, nextInputId) {
+        const inputElement = event.target;
+        const inputValue = inputElement.value;
+
+        // Move to the next input field if the current input is not empty and is a number
+        if (inputValue && !isNaN(inputValue)) {
+          const nextInput = document.getElementById(nextInputId);
+          nextInput.focus();
+          enablePointerEvents(nextInput, true); // To enable cursor in that area
+        }
+      }
+
+      document
+        .getElementById("first_otp")
+        .addEventListener("input", function (event) {
+          handleOTPInputNavigation(event, "second_otp");
+        });
+
+      document
+        .getElementById("second_otp")
+        .addEventListener("input", function (event) {
+          handleOTPInputNavigation(event, "third_otp");
+        });
+
+      document
+        .getElementById("third_otp")
+        .addEventListener("input", function (event) {
+          handleOTPInputNavigation(event, "fourth_otp");
+        });
+
+      document
+        .getElementById("fourth_otp")
+        .addEventListener("input", function (event) {
+          handleOTPInputNavigation(event, "fifth_otp");
+        });
+
+      document
+        .getElementById("fifth_otp")
+        .addEventListener("input", function (event) {
+          handleOTPInputNavigation(event, "sixth_otp");
+        });
+
+      const otpInputFields = document.querySelectorAll(".input_otp");
+      for (let i = 1; i < otpInputFields.length; i++) {
+        enablePointerEvents(otpInputFields[i], false);
+      }
+
+      // Function to handle Backspace key press
+      function handleBackspace(event, prevInputId) {
+        if (event.code === "Backspace" || event.key === "Backspace") {
+          const inputElement = event.target;
+          const prevInput = document.getElementById(prevInputId);
+          const inputValue = inputElement.value;
+
+          if (inputValue.length === 0) {
+            prevInput.focus();
+          }
+        }
+      }
+
+      // Add event listeners to handle Backspace key press
+      document
+        .getElementById("second_otp")
+        .addEventListener("keydown", function (event) {
+          handleBackspace(event, "first_otp");
+        });
+      document
+        .getElementById("third_otp")
+        .addEventListener("keydown", function (event) {
+          handleBackspace(event, "second_otp");
+        });
+      document
+        .getElementById("fourth_otp")
+        .addEventListener("keydown", function (event) {
+          handleBackspace(event, "third_otp");
+        });
+      document
+        .getElementById("fifth_otp")
+        .addEventListener("keydown", function (event) {
+          handleBackspace(event, "fourth_otp");
+        });
+      document
+        .getElementById("sixth_otp")
+        .addEventListener("keydown", function (event) {
+          handleBackspace(event, "fifth_otp");
+        });
+
+      // Function to start the countdown
+      function startCountdown(seconds) {
+        const countdownElement = document.getElementById("countdown");
+        const countdownTextElement = document.getElementById("countdown-text");
+        const resendOTPButton = document.getElementById("resendOTPButton");
+
+        let remainingSeconds = seconds;
+
+        // Update the countdown display every second
+        const countdownInterval = setInterval(() => {
+          remainingSeconds--;
+          countdownElement.textContent = remainingSeconds;
+
+          if (remainingSeconds <= 0) {
+            clearInterval(countdownInterval);
+            countdownTextElement.innerHTML =
+              'Kode verifikasi telah kadaluarsa. Tidak menerima OTP? <a href="#" style="color: red;"> <br>Kirim Ulang</a>';
+          }
+        }, 1000);
+      }
+
+      // Function to reset the countdown and hide the "Resend OTP" button
+      function resetCountdown() {
+        const resendOTPButton = document.getElementById("resendOTPButton");
+        startCountdown(60);
+      }
+
+      startCountdown(60);
+    </script>
+  </body>
+</html>

@@ -72,6 +72,41 @@ select.form-control:hover {
   cursor: pointer;
 }
 
+.select-wrapper {
+  position: relative;
+  margin-bottom: 32px;
+  width: 90%;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+.select-wrapper select {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black; /* Add a bottom border to mimic a line input */
+  color: black;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 0px;
+}
+
+/* Optional: Adjust font size and styling of the label */
+.select-wrapper label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
+  transition: 0.5s;
+  padding-left: 20px; /* changed */
+  padding-left: 30px;
+  top: -20px;
+}
+
 @media (max-width: 1035px) {
   .paddingLeft {
     padding-left: 35px;
@@ -157,12 +192,14 @@ button {
   font-weight: bold;
   margin: 10px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .manual-button:hover {
   background-color: #970c10;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0.8, 0.1);
 }
 
 .signup-text {

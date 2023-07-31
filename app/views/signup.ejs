@@ -72,29 +72,29 @@
           <!--No Telepon-->
           <div class="form-group mb-3 col-md">
             <div class="userInputBox">
-              <input type="number" id="usernameInputBox" required />
-              <Label for="usernameInputBox">No Telp</Label>
+              <input type="tel" id="telephoneInputBox" required />
+              <Label for="usernameInputBox">Nomor Telepon</Label>
             </div>
           </div>
 
           <!--NIK-->
           <div class="form-group mb-3 col-md">
             <div class="userInputBox">
-              <input type="number" id="usernameInputBox" required />
+              <input type="tel" id="telephoneInputBox" required />
               <Label for="usernameInputBox">NIK</Label>
             </div>
           </div>
 
-          <!--Gender-->
+          <!-- Gender -->
           <div class="form-group mb-3 col-md">
-            <div class="userInputBox3 maxWidth" style="padding-top: 6vh">
+            <div class="select-wrapper">
               <select
-                class="form-control"
+                class="userInputBox3"
                 id="registerGender"
                 name="registerGender"
                 required
                 placeholder="Select Gender"
-                style="width: 95%"
+                style="top: 12px"
               >
                 <option
                   id="defaultValue"
@@ -156,5 +156,11 @@
     <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
     <script src="/javascript/cursorNormal.js"></script>
     <script src="/javascript/eyeIcon.js"></script>
+    <script>
+      const inputBox = document.getElementById("telephoneInputBox");
+      inputBox.addEventListener("input", (event) => {
+        event.target.value = event.target.value.replace(/\D/g, "");
+      });
+    </script>
   </body>
 </html>

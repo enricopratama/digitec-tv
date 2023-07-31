@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partial/header') %>
+    <link rel="stylesheet" href="css/verification.css" />
+    <link rel="stylesheet" href="css/mask.css" />
+    <title>Verification</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <%- include('./partial/navbar') %>
+    <button id="goBackButton" onclick="history.back()">
+      <img src="image/leftArrow.png" alt="Go Back" style="height: 35px" />
+    </button>
+    <div class="login-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="login-box">
+        <h1>Verifikasi Akun</h1>
+        <p class="desc">
+          Pilih salah satu metode untuk melakukan verifikasi akun
+        </p>
+
+        <form>
+          <a
+            href="#"
+            class="manual-button"
+            style="justify-content: center; align-items: center; padding: 10px"
+          >
+            <span class="manual-button-icon" style="padding-bottom: 14px">
+              <i class="fas fa-sms"></i>
+            </span>
+            <div class="button-text">
+              <div>Verification via SMS</div>
+              <p class="userNumber">*********4795</p>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="manual-button"
+            style="justify-content: center; align-items: center; padding: 10px"
+          >
+            <span class="manual-button-icon" style="padding-bottom: 14px">
+              <i class="fab fa-whatsapp"></i>
+            </span>
+            <div class="button-text">
+              <div>Verification via WhatsApp</div>
+              <p class="userNumber">*********4795</p>
+            </div>
+          </a>
+        </form>
+      </div>
+      <div class="mask"></div>
+    </div>
+    <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
+    <script>
+      const mask = document.querySelector(".mask");
+
+      function updateMaskPosition(pos) {
+        let x = (pos.clientX / window.innerWidth) * 100;
+        let y = ((pos.clientY + window.pageYOffset) / window.innerHeight) * 100;
+
+        y -= 8; // Optimizaton because of arrow back button at top
+
+        mask.style.setProperty("--mouse-x", x + "%");
+        mask.style.setProperty("--mouse-y", y + "%");
+      }
+
+      document.addEventListener("pointermove", (pos) => {
+        updateMaskPosition(pos);
+      });
+
+      window.addEventListener("resize", () => {
+        // Recalculate mask position when the window is resized
+        const currentPos = { clientX: event.clientX, clientY: event.clientY };
+        updateMaskPosition(currentPos);
+      });
+    </script>
+  </body>
+</html>

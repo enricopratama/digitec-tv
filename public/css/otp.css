@@ -81,25 +81,69 @@ button {
   box-shadow: 0 0 8px rgba(0, 0, 0.8, 0.1);
 }
 
-.signup-text {
-  color: #333;
-  text-align: center;
-  justify-content: center;
-  padding: 10px;
+.otp-input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: 0;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 0px;
+}
+.otp-input:focus ~ label,
+.otp-input:valid ~ label {
+  top: -20px;
   font-size: 12px;
+  color: black;
+  font-weight: bold;
 }
 
-.signup-link {
-  color: blue;
+.countdown-text {
+  font-size: calc(0.6rem + 0.6vh);
+  font-style: italic;
+  color: grey;
+}
+
+.input_otp {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
   text-align: center;
-  justify-content: center;
-  font: 12px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 /* Responsive styles */
+@media (max-width: 920px) {
+  .login-box {
+    position: absolute;
+    z-index: 5;
+    flex: 1;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 35vw;
+    width: 100%;
+    top: 30%;
+    min-width: 70vw;
+  }
+}
 @media (max-width: 725px) {
   .login-box {
     min-width: 80vw;
+  }
+}
+
+@media (max-width: 290px) {
+  .login-box {
+    min-width: 99vw;
   }
 }
 

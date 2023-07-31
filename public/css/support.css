@@ -20,12 +20,6 @@ h1.highlight {
   transition: 0.5s;
 }
 
-/* h1.highlight:hover {
-  font-size: 30px;
-  background: white;
-  background: rgba(255, 255, 255, 0.7);
-} */
-
 p.highlight {
   font-size: calc(0.5rem + 0.5vw);
   background: transparent;

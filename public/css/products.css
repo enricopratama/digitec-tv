@@ -15,6 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   padding-top: 60px;
 }
+
 .bgGrey {
   background-color: #404040;
 }
@@ -25,15 +26,6 @@ body {
 
 .zIndex100 {
   z-index: 100;
-}
-
-.grey-background {
-  background-color: #404040;
-}
-
-h1,
-p {
-  color: white;
 }
 
 h1 {

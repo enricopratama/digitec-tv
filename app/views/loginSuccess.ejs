@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partial/header') %>
+    <link rel="stylesheet" href="css/mask.css" />
+    <link rel="stylesheet" href="css/signup.css" />
+    <title>Sign Up</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!--jQuery-->
+  </head>
+  <body>
+    <%- include('./partial/navbar') %>
+    <div class="login-container">
+      <div class="login-box col-md-6 col-sm-12 col-xs-12 padLeft">
+        <h1>Welcome Back!</h1>
+        <form>
+          <!--No Telepon-->
+          <div class="form-group mb-3 col-md">
+            <div class="userInputBox">
+              <input type="tel" id="usernameInputBox" required />
+              <Label for="usernameInputBox">Nomor Telepon</Label>
+            </div>
+          </div>
+          <!--Kata Sandi-->
+          <div class="form-group mb-3 col-md">
+            <div class="userInputBox">
+              <input type="password" id="passwordInputBox" required />
+              <Label for="passwordInputBox">Kata Sandi</Label>
+              <i
+                id="togglePassword"
+                class="fa fa-eye-slash leftTrans"
+                aria-hidden="true"
+              ></i>
+            </div>
+          </div>
+
+          <!--Tombol Log In-->
+          <button type="submit" class="manual-button" onclick="validateInput()">
+            Lanjut
+          </button>
+          <p class="signup-text">
+            Tidak memiliki akun?&nbsp;&nbsp;<a
+              href="/signup"
+              class="signup-link"
+              >SIGN UP</a
+            >
+          </p>
+        </form>
+      </div>
+      <div class="mask"></div>
+    </div>
+    <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
+    <script src="/javascript/cursorNormal.js"></script>
+    <script src="/javascript/eyeIcon.js"></script>
+    <script>
+      const inputBox = document.getElementById("usernameInputBox");
+      inputBox.addEventListener("input", (event) => {
+        event.target.value = event.target.value.replace(/\D/g, "");
+      });
+    </script>
+  </body>
+</html>

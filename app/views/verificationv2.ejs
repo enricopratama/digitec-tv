@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partial/header') %>
+    <link rel="stylesheet" href="css/404.css" />
+    <link rel="stylesheet" href="css/verification.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Account Verification</title>
+  </head>
+  <body>
+    <%- include('./partial/navbar') %>
+    <div class="main">
+      <div class="col-lg-3">
+        <button id="goBackButton">
+          <img src="image/leftArrow.png" alt="Go Back" style="height: 35px" />
+        </button>
+      </div>
+      <div class="col-12 registerAkunBox">
+        <h1 class="title">Verifikasi Akun</h1>
+        <p class="desc">
+          Pilih salah satu metode untuk melakukan verifikasi akun
+        </p>
+      </div>
+    </div>
+    <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
+  </body>
+</html>

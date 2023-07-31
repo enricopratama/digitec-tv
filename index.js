@@ -38,17 +38,21 @@ app.get('/login', (req, res) => {
     res.render('login', { currentPage: 'login' });
 });
 
+app.get('/loginSuccess', (req, res) => {
+  res.render('loginSuccess', { currentPage: 'loginSuccess' });
+});
+
 app.get('/signup', (req, res) => {
   res.render('signup', { currentPage: 'signup' });
 });
 
-app.get('/test', (req, res) => {
-  res.render('test', { currentPage: 'test' });
+app.get('/verification', (req, res) => {
+  res.render('verification', { currentPage: 'verification' });
 });
 
-// app.get('/login2', (req, res) => {
-//   res.render('login2', { currentPage: 'login2' });
-// });
+app.get('/otp', (req, res) => {
+  res.render('otp', { currentPage: 'otp' });
+});
 
 // Handling non matching request from the client (404 not found)
 app.all('*', (req, res) => {

@@ -8,36 +8,12 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.bgImage {
-  background-image: url("/image/tes-background.jpg");
-  background-position: center center;
-  background-size: cover;
-  margin: 0;
-  /* display: flex; */
-}
-
-/* p {
-  font-size: 14px;
-  color: black;
-  font-family: "Poppins", sans-serif;
-  font-family: "Work Sans", sans-serif;
-} */
-
 h1.highlight {
   font-size: 24px;
   background: transparent;
   transition: 0.2s;
   font-weight: 600;
-  /* padding: 16px; */
 }
-
-/* h1.highlight:hover {
-  font-size: 30px;
-  background: white;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(2px);
-  padding: 16px;
-} */
 
 p.highlight {
   font-size: calc(0.5rem + 0.6vw);
@@ -46,14 +22,6 @@ p.highlight {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
-/* p.highlight:hover {
-  font-size: 14px;
-  background: white;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(2px);
-  padding: 20px;
-} */
 
 :root {
   --mouse-x: 50%;
@@ -86,14 +54,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.grey-background {
-  background-color: #404040;
-  padding: 10px;
-  /* color: #fff; */
-  width: 100%;
-  margin: 0;
 }
 
 h1 {
@@ -160,7 +120,7 @@ ul {
     color: black;
     font-family: "Poppins", sans-serif;
     font-family: "Work Sans", sans-serif;
-    font-size: calc(0.6rem + 1vw);
+    font-size: calc(0.5rem + 0.8vw);
   }
 
   .h1 {
@@ -176,7 +136,7 @@ ul {
   }
 
   p.highlight {
-    font-size: calc(0.6rem + 1vw);
+    font-size: calc(0.6rem + 0.7vw);
     background: transparent;
     transition: 0.2s;
     padding-top: 5px;
