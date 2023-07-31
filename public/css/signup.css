@@ -337,6 +337,10 @@ button {
     padding-top: 30px;
   }
 
+  .widthSmaller {
+    width: 92%;
+  }
+
   .formatCalendar {
     display: none;
   }
