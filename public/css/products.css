@@ -118,8 +118,8 @@ ul {
 
 .section {
   display: flex;
-  /* background: white; */
-  background-image: url("/image/bgStill.png"); /* changed */
+  background-image: url("/image/bgStill.png");
+  background-repeat: no-repeat;
 }
 
 .subsection {
@@ -165,7 +165,7 @@ ul {
 }
 
 .buy-now-button {
-  padding-left: 16px;
+  padding-left: 22px;
 }
 
 .buy-button {
@@ -190,7 +190,7 @@ ul {
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;
-  padding: 15px; /* changed */
+  padding: 10px;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
@@ -241,15 +241,14 @@ ul {
 
   .smallsection1,
   .smallsection2 {
-    flex: 0 0 100%;
-    transform: translateY(-50px);
-    padding-bottom: 10vw;
+    flex: 0 0 50%;
+    transform: translateY(-20vh);
+    padding-bottom: 8vw;
     align-items: center;
   }
 
   .section {
     display: flex;
-    background: white;
     flex-wrap: wrap;
   }
 
@@ -262,6 +261,16 @@ ul {
     width: 100%;
     height: auto;
     padding-right: 20vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .smallsection1,
+  .smallsection2 {
+    flex: 0 0 100%;
+    transform: translateY(-20vh);
+    padding-bottom: 8vw;
+    align-items: center;
   }
 }
 
@@ -469,7 +478,7 @@ ul {
   .spesifikasiPoints {
     font-weight: 400;
     font-size: 15px;
-    padding: 0px 0px 20vh 10vb;
+    padding: 0px 0px 20vh 10vw;
     font-family: "Montserrat", sans-serif;
     line-height: 25px;
     max-width: 40vb;
@@ -494,6 +503,13 @@ ul {
 
 /* Galaxy Fold */
 @media (max-width: 344px) {
+  .smallsection1,
+  .smallsection2 {
+    flex: 0 0 100%;
+    transform: translateY(-10vh);
+    padding-bottom: 8vw;
+    align-items: center;
+  }
   .heightImage {
     height: 80px;
     padding-left: 60px;
