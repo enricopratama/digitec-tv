@@ -120,6 +120,7 @@ ul {
   display: flex;
   background-image: url("/image/bgStill.png");
   background-repeat: no-repeat;
+  background-size: 200vh;
 }
 
 .subsection {
@@ -389,6 +390,12 @@ ul {
 }
 
 @media (min-width: 437px) and (max-width: 991.98px) {
+  .section {
+    display: flex;
+    background-image: url("/image/bgStill.png");
+    background-repeat: no-repeat;
+    background-size: 400vh;
+  }
   .contentItem {
     text-align: center;
   }
@@ -460,6 +467,12 @@ ul {
 }
 
 @media (max-width: 437px) and (min-width: 345px) {
+  .section {
+    display: flex;
+    background-image: url("/image/bgStill.png");
+    background-repeat: no-repeat;
+    background-size: 400vh;
+  }
   .heightImage {
     height: 120px;
     padding-left: 24px;
@@ -503,6 +516,12 @@ ul {
 
 /* Galaxy Fold */
 @media (max-width: 344px) {
+  .section {
+    display: flex;
+    background-image: url("/image/bgStill.png");
+    background-repeat: no-repeat;
+    background-size: 400vh;
+  }
   .smallsection1,
   .smallsection2 {
     flex: 0 0 100%;
