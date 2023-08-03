@@ -3,6 +3,7 @@
   <head>
     <%- include('./partial/header') %>
     <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/maskProduct.css" />
     <title>A Harmony of Japanese Art and Technology | Digitec</title>
   </head>
   <body>
@@ -19,7 +20,7 @@
     >
       <div class="d-flex col-lg-12 order-1 p-0 d-block" id="imageStack">
         <img
-          src="image/assetBaru3.jpg"
+          src="image/newImage2.jpg"
           alt="Smart TV"
           class="img-fluid cut-img width100"
           data-aos="fade-up"
@@ -28,7 +29,7 @@
       </div>
       <div class="col-lg-6 col-12 order-2">
         <div
-          class="descBox positionDesc mx-auto paddingCont mx-lg-3"
+          class="descBox positionDesc-smartTV mx-auto paddingCont mx-lg-3"
           data-aos="fade-up"
           data-aos-duration="2500"
         >
@@ -123,7 +124,9 @@
     <div class="section">
       <div class="subsection">
         <div class="spesifikasiDisplay">
-          <h1 class="spesifikasiFold">SPECIFICATIONS</h1>
+          <h1 class="spesifikasiFold" style="font-weight: 700">
+            SPECIFICATIONS
+          </h1>
         </div>
         <div class="spesifikasiPoints">
           <ul>
@@ -164,7 +167,9 @@
           </div>
         </div>
       </div>
+      <!-- <div class="mask"></div> -->
     </div>
+    <script src="/javascript/cursorHome.js"></script>
     <%- include('./partial/footer') %> <%- include('./partial/scriptFooter') %>
   </body>
 </html>

@@ -22,6 +22,12 @@ app.get("/sitemap.xml", (req, res) => {
   });
 
 // Routes:
+app.use((req, res, next) => {
+  // Remove duplicate slashes from the request URL
+  req.url = req.url.replace(/\/{2,}/g, '/');
+  next();
+});
+
 app.get('/', (req, res) => {
     res.render('homepage', { currentPage: 'home' });
 });
@@ -55,25 +61,25 @@ app.get('/otp', (req, res) => {
 });
 
 // Handling non matching request from the client (404 not found)
-app.all('*', (req, res) => {
-    res.render('page_404', { currentPage: 'page_404' });
-  });
+app.use((req, res, next) => {
+  res.status(404).render('page_404', { currentPage: 'page_404' });
+});
 
-// app.get("*", (req, res, next) => {
-// if (req.headers.host.startsWith("www.")) {
-//     res.redirect(301, `http://${req.headers.host.slice(4)}${req.originalUrl}`);
-// } else {
-//     next();
-// }
-// });
+app.get("*", (req, res, next) => {
+  if (req.headers.host.startsWith("www.")) {
+    res.redirect(301, `http://${req.headers.host.slice(4)}${req.originalUrl}`);
+  } else {
+    next();
+  }
+});
 
 app.use((req, res, next) => {
-    if (req.headers.host.startsWith('www.')) {
-      const newUrl = `http://${req.headers.host.slice(4)}${req.originalUrl}`;
-      return res.redirect(301, newUrl);
-    }
-    next();
-  });
+  if (req.headers.host.startsWith('www.')) {
+    const newUrl = `http://${req.headers.host.slice(4)}${req.originalUrl}`;
+    return res.redirect(301, newUrl);
+  }
+  next();
+});
 
 app.listen(process.env.APP_PORT, function(err) {
     if (err) {

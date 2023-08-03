@@ -92,16 +92,21 @@ ul {
 
 .positionDesc {
   position: absolute !important;
-  top: 50% !important;
+  top: 40% !important;
   right: 0 !important;
   transform: translateY(-50%) !important;
 }
 
 .positionDesc-smartTV {
-  position: absolute !important;
+  /* position: absolute !important;
   top: 30% !important;
   right: 0 !important;
-  transform: translateX(-33%) !important;
+  transform: translateX(-33%) !important; */
+  position: absolute !important;
+  top: 35% !important;
+  right: 0 !important;
+  transform: translateY(-40%) !important;
+  translate: -120px;
 }
 
 .positionDescLeft {
@@ -113,7 +118,8 @@ ul {
 
 .section {
   display: flex;
-  background: white;
+  /* background: white; */
+  background-image: url("/image/bgStill.png"); /* changed */
 }
 
 .subsection {
@@ -124,6 +130,7 @@ ul {
   align-items: center;
   width: 50%;
   height: auto;
+  z-index: 10;
 }
 
 .smallsection1,
@@ -133,6 +140,7 @@ ul {
   justify-content: center;
   align-items: center;
   width: 21%;
+  z-index: 10;
 }
 
 .heightImage {
@@ -173,15 +181,16 @@ ul {
 
 .manual-button {
   display: inline-block;
-  padding: 4px 8px 4px 8px;
+  /* padding: 4px 8px 4px 8px; */
   background-color: #d34f4f;
   color: white;
   border: none;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
+  padding: 15px; /* changed */
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
@@ -265,9 +274,9 @@ ul {
   }
 
   .spesifikasiPoints {
-    font-weight: 200;
-    font-size: 18px;
-    padding: 10px 0px 20vh 8vb;
+    font-weight: 350;
+    font-size: 16px;
+    padding: 10px 0px 20vh 4vw;
     font-family: "Montserrat", sans-serif;
     line-height: 40px;
   }
@@ -283,7 +292,7 @@ ul {
     object-fit: cover;
     width: 100%;
     height: 90vw !important;
-    object-position: 18%;
+    object-position: 2%;
   }
 
   .cut-img2 {
@@ -358,6 +367,7 @@ ul {
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
+    translate: 10px;
   }
 
   .positionDescLeft {
@@ -412,6 +422,7 @@ ul {
     top: 0% !important;
     right: 0 !important;
     transform: translateY(0%) !important;
+    translate: 10px;
   }
 
   .descTitle {
@@ -472,6 +483,13 @@ ul {
     padding-left: 2vb;
     padding-right: 2vb;
   }
+  .positionDesc-smartTV {
+    position: static !important;
+    top: 0% !important;
+    right: 0 !important;
+    transform: translateY(0%) !important;
+    translate: 3px;
+  }
 }
 
 /* Galaxy Fold */
@@ -516,6 +534,15 @@ ul {
     transform: translateY(0%) !important;
     padding-left: 2vb;
     padding-right: 2vb;
+  }
+
+  .positionDesc-smartTV {
+    position: static !important;
+    top: 0% !important;
+    right: 0 !important;
+    transform: translateY(0%) !important;
+    translate: 10px;
+    padding-right: 10px;
   }
 
   .descTitle {

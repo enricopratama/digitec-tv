@@ -14,19 +14,19 @@ function updateMaskPosition(pos) {
   if (window.innerWidth >= 1280) {
     y -= 78;
   } else if (window.innerWidth < 1280 && window.innerWidth > 1020) {
-    y -= 80;
+    y -= 60;
   } else if (window.innerWidth < 1020 && window.innerWidth > 920) {
-    y -= 75;
-  } else if (window.innerWidth < 920 && window.innerWidth > 820) {
-    y -= 65;
-  } else if (window.innerWidth < 820 && window.innerWidth > 720) {
     y -= 55;
+  } else if (window.innerWidth < 920 && window.innerWidth > 820) {
+    y -= 45; 
+  } else if (window.innerWidth < 820 && window.innerWidth > 720) {
+    y -= 45; 
   } else if (window.innerWidth < 720 && window.innerWidth > 620) {
-    y -= 45;
+    y -= 35; 
   } else if (window.innerWidth < 620 && window.innerWidth > 520) {
-    y -= 35;
+    y -= 35; 
   } else if (window.innerWidth < 520 && window.innerWidth > 220) {
-    y -= 25;
+    y -= 30; 
   } 
 
   mask.style.setProperty('--mouse-x', x + '%');

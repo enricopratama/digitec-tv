@@ -145,7 +145,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 35vw;
+  max-width: 40vw;
   width: 100%;
   top: 20%;
 }
@@ -156,6 +156,13 @@ body {
   color: #333;
   font-size: calc(1.375rem + 0.7vw);
   padding-right: 20px;
+}
+
+/* Except for Fold */
+@media (min-width: 300px) {
+  .paddingRight {
+    padding-right: 20px;
+  }
 }
 
 form {
@@ -218,7 +225,7 @@ button {
 }
 
 /* Responsive styles */
-@media (max-width: 992px) {
+@media (max-width: 1025px) {
   .login-box {
     min-width: 80%;
   }
@@ -233,6 +240,16 @@ button {
 @media (max-width: 290px) {
   .login-box {
     min-width: 90%;
+  }
+
+  .paddingLeft2 {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 777px) {
+  .width76 {
+    width: 76% !important;
   }
 }
 
